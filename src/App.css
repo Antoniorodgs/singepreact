@@ -1,38 +1,61 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  background-image: linear-gradient(135deg,#457a38,#669b58,#a8de97 48%,#c9ffb7);
 }
 
-.App-link {
-  color: #61dafb;
+/* Restante do seu CSS */
+
+
+.form-container, .login-form, .register-form {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 600px) {
+  .form-container {
+    padding: 3rem;
+    border: 0.0625rem solid white;
+    border-radius: 0.625rem;
+    margin: 0.3125rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+label {
+  text-align: left;
+  padding: 0.15625rem 0;
+}
+
+input {
+  margin: 0.3125rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.625rem;
+}
+
+button {
+  border: none; 
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  color:#006400;
+}
+
+.link-btn {
+  background: none;
+  color: black;
+  text-decoration: underline;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f5f5f5;
 }
