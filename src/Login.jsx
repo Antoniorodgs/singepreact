@@ -27,7 +27,8 @@ export const Login = (props) => {
         <label htmlFor="password">Senha</label>
         <input value={pass} onChange={handlePassChange} type="password" placeholder="********" id="password" name="password"/>
 
-        <button type="submit">Conecte-se</button>
+        <button onClick="send()" type="submit">Conecte-se</button>
+
       </form>
       <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Não tem uma conta? Registre-se aqui.</button>
     </div>

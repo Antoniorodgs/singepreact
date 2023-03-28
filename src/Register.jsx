@@ -1,16 +1,46 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import axios from 'axios';
 
 export const Register = (props) => {
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  const [name, setName] = useState("");
-  const [whatsapp, setWhatsapp] = useState("");
-  const [establishment, setEstablishment] = useState("");
-  const [confirmPass, setConfirmPass] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
+  const [establishment, setEstablishment] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    const baseURL = 'http://localhost:3033/signup';
     e.preventDefault();
-    console.log(email, pass, name, whatsapp, establishment, confirmPass);
+    console.log(
+      email,
+      password,
+      name,
+      whatsapp,
+      establishment,
+      confirmPassword,
+    );
+    const ownerof = 'nirvana';
+    const objJson = {
+      name,
+      email,
+      whatsapp,
+      ownerof,
+      password,
+      confirmPassword,
+    };
+    console.log(objJson);
+    // const resp = await axios
+    //   .post(baseURL, objJson)
+    //   .catch((err) => console.log(err));
+
+    const resp = await axios({
+      method: 'post',
+      baseURL: 'http://localhost:3033/',
+      url: '/signup',
+      payload: objJson,
+    });
+    console.log(resp);
   };
 
   const handleEmailChange = (e) => {
@@ -18,11 +48,11 @@ export const Register = (props) => {
   };
 
   const handlePasswordChange = (e) => {
-    setPass(e.target.value);
+    setPassword(e.target.value);
   };
 
   const handleConfirmPasswordChange = (e) => {
-    setConfirmPass(e.target.value);
+    setConfirmPassword(e.target.value);
   };
 
   const handleNameChange = (e) => {
@@ -79,7 +109,7 @@ export const Register = (props) => {
 
         <label htmlFor="password">Senha</label>
         <input
-          value={pass}
+          value={password}
           type="password"
           placeholder="********"
           id="password"
@@ -89,7 +119,7 @@ export const Register = (props) => {
 
         <label htmlFor="confirmPassword">Confirmar senha</label>
         <input
-          value={confirmPass}
+          value={confirmPassword}
           type="password"
           placeholder="********"
           id="confirmPassword"
@@ -99,10 +129,7 @@ export const Register = (props) => {
 
         <button type="submit">Finalizar Cadastro</button>
       </form>
-      <button
-        className="link-btn"
-        onClick={() => props.onFormSwitch("login")}
-      >
+      <button className="link-btn" onClick={() => props.onFormSwitch('login')}>
         Já possue uma conta? Entre aqui.
       </button>
     </div>
