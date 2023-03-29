@@ -1,40 +1,139 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import axios from 'axios';
 
 export const Register = (props) => {
   const [email, setEmail] = useState('');
-  const [pass, setPass] = useState('');
+  const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
+  const [establishment, setEstablishment] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    const baseURL = 'http://localhost:3033/signup';
     e.preventDefault();
-    console.log(email);
-  }
+    console.log(
+      email,
+      password,
+      name,
+      whatsapp,
+      establishment,
+      confirmPassword,
+    );
+    const ownerof = 'nirvana';
+    let objJson = {
+      name,
+      email,
+      whatsapp,
+      ownerof,
+      password,
+      confirmPassword,
+    };
+    let config = {
+      headers: {
+         'Content-Type': 'application/x-www-form-urlencoded',
+      } 
+ }
+    // const resp = await axios
+    //   .post(baseURL, objJson)
+    //   .catch((err) => console.log(err));
+    const resp = await axios.post('http://localhost:3033/signup', objJson, {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    })
+    console.log(resp);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleWhatsappChange = (e) => {
+    setWhatsapp(e.target.value);
+  };
+
+  const handleEstablishmentChange = (e) => {
+    setEstablishment(e.target.value);
+  };
 
   return (
     <div className="form-container">
       <h2>Registre-se</h2>
-    <form className="register-form" onSubmit={handleSubmit}>
-      <label htmlFor="name">Nome Completo</label>
-      <input name="name" id="name" placeholder="Nome"/>
-      <label htmlFor="email">E-mail</label>
-      <input type="email" placeholder="Digite o seu e-mail" id="email" name="email"/>
+      <form className="register-form" onSubmit={handleSubmit}>
+        <label htmlFor="name">Nome Completo</label>
+        <input
+          value={name}
+          name="name"
+          id="name"
+          placeholder="Nome"
+          onChange={handleNameChange}
+        />
+        <label htmlFor="email">E-mail</label>
+        <input
+          value={email}
+          type="email"
+          placeholder="Digite o seu e-mail"
+          id="email"
+          name="email"
+          onChange={handleEmailChange}
+        />
 
-      <label htmlFor="whatsapp">Whatsapp</label>
-      <input name="whatsapp" placeholder="1191234-5678" id="whatsapp"/>
+        <label htmlFor="whatsapp">Whatsapp</label>
+        <input
+          value={whatsapp}
+          name="whatsapp"
+          placeholder="1191234-5678"
+          id="whatsapp"
+          onChange={handleWhatsappChange}
+        />
 
-      <label htmlFor="establishment">Nome do estabelecimento</label>
-      <input type="name" placeholder="Nome fantásia" name="establishment"/>
+        <label htmlFor="establishment">Nome do estabelecimento</label>
+        <input
+          value={establishment}
+          type="name"
+          placeholder="Nome fantasia"
+          name="establishment"
+          onChange={handleEstablishmentChange}
+        />
 
-      <label htmlFor="password">Senha</label>
-      <input type="password" placeholder="********" id="password" name="password"/>
-      
-      <label htmlFor="passwordConfirm">Confirme a senha</label>
-      <input type="password" placeholder="********" id="password" name="passwordConfirm"/>
+        <label htmlFor="password">Senha</label>
+        <input
+          value={password}
+          type="password"
+          placeholder="********"
+          id="password"
+          name="password"
+          onChange={handlePasswordChange}
+        />
 
-      <button type="submit">Conecte-se</button>
-    </form>
-    <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Já possue uma conta? Entre aqui.</button>
-  </div>
-  )
-}
+        <label htmlFor="confirmPassword">Confirmar senha</label>
+        <input
+          value={confirmPassword}
+          type="password"
+          placeholder="********"
+          id="confirmPassword"
+          name="confirmPassword"
+          onChange={handleConfirmPasswordChange}
+        />
+
+        <button type="submit">Finalizar Cadastro</button>
+      </form>
+      <button className="link-btn" onClick={() => props.onFormSwitch('login')}>
+        Já possue uma conta? Entre aqui.
+      </button>
+    </div>
+  );
+};
