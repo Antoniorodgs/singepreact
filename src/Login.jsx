@@ -28,10 +28,8 @@ export const Login = (props) => {
       console.log(resp.data);
       alert(resp.data.body);
     } catch(error) {
-      alert(error.request.response);
-      console.log(error.request.response);
-
-      console.log(error.request.status);
+      let data = JSON.parse(error.request.response);
+      alert(data.body);
     }
     
   }
