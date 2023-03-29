@@ -1,33 +1,52 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 export const Login = (props) => {
-  const [email, setEmail] = useState('');
-  const [pass, setPass] = useState('');
+  const [user, setUser] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
+  const handleUserChange = (e) => {
+    setUser(e.target.value);
   }
 
   const handlePassChange = (e) => {
-    setPass(e.target.value);
+    setPassword(e.target.value);
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email);
+
+    const objJson = {user, password};
+    console.log(objJson);
+    
+    try {
+      const resp = await axios.post('http://localhost:3033/signin', objJson, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      });
+      console.log(resp.data);
+      alert(resp.data.body);
+    } catch(error) {
+      alert(error.request.response);
+      console.log(error.request.response);
+
+      console.log(error.request.status);
+    }
+    
   }
   
   return (
     <div className="form-container">
       <h2>Conecte-se</h2>
       <form className="login-form" onSubmit={handleSubmit}>
-        <label htmlFor="email">E-mail</label>
-        <input value={email} onChange={handleEmailChange} type="email" placeholder="Digite o seu e-mail" id="email" name="email"/>
+        <label htmlFor="user">Usuário</label>
+        <input value={user} onChange={handleUserChange} placeholder="Digite o seu usuário" id="user" name="user"/>
 
         <label htmlFor="password">Senha</label>
-        <input value={pass} onChange={handlePassChange} type="password" placeholder="********" id="password" name="password"/>
+        <input value={password} onChange={handlePassChange} type="password" placeholder="********" id="password" name="password"/><br></br>
 
-        <button onClick="send()" type="submit">Conecte-se</button>
+        <button type="submit">Conecte-se</button>
 
       </form>
       <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Não tem uma conta? Registre-se aqui.</button>

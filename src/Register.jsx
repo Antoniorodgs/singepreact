@@ -10,7 +10,7 @@ export const Register = (props) => {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleSubmit = async (e) => {
-    const baseURL = 'http://localhost:3033/signup';
+
     e.preventDefault();
     console.log(
       email,
@@ -20,29 +20,30 @@ export const Register = (props) => {
       establishment,
       confirmPassword,
     );
-    const ownerof = 'nirvana';
+   
     let objJson = {
       name,
       email,
       whatsapp,
-      ownerof,
+      ownerof: establishment,
       password,
       confirmPassword,
     };
-    let config = {
-      headers: {
-         'Content-Type': 'application/x-www-form-urlencoded',
-      } 
- }
-    // const resp = await axios
-    //   .post(baseURL, objJson)
-    //   .catch((err) => console.log(err));
-    const resp = await axios.post('http://localhost:3033/signup', objJson, {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }
-    })
-    console.log(resp);
+
+    try {
+      const resp = await axios.post('http://localhost:3033/signup', objJson, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      });
+      alert(resp.data);
+    } catch(error) {
+      alert(error.request.response);
+      console.log(error.request.response);
+
+      console.log(error.request.status);
+    }
+
   };
 
   const handleEmailChange = (e) => {
@@ -127,7 +128,7 @@ export const Register = (props) => {
           id="confirmPassword"
           name="confirmPassword"
           onChange={handleConfirmPasswordChange}
-        />
+        /><br></br>
 
         <button type="submit">Finalizar Cadastro</button>
       </form>
