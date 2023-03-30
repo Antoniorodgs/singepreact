@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 export const Login = (props) => {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleUserChange = (e) => {
     setUser(e.target.value);
@@ -13,6 +15,10 @@ export const Login = (props) => {
     setPassword(e.target.value);
   }
 
+  const handleOnClick = (e) => {
+    navigate("/register");
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -20,21 +26,26 @@ export const Login = (props) => {
     console.log(objJson);
     
     try {
+      
       const resp = await axios.post('http://localhost:3033/signin', objJson, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
       });
-      console.log(resp.data);
       alert(resp.data.body);
+      if(resp.status === 200) navigate("/dashboard");
+
     } catch(error) {
+
       let data = JSON.parse(error.request.response);
       alert(data.body);
+
     }
     
   }
   
   return (
+    <div className="App">
     <div className="form-container">
       <h2>Conecte-se</h2>
       <form className="login-form" onSubmit={handleSubmit}>
@@ -46,8 +57,9 @@ export const Login = (props) => {
 
         <button type="submit">Conecte-se</button>
 
-      </form>
-      <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Não tem uma conta? Registre-se aqui.</button>
+      </form><br></br>
+      <button className="link-btn" onClick={handleOnClick}>Não tem uma conta? Registre-se aqui.</button>
+    </div>
     </div>
   )
 }

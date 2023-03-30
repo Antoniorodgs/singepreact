@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './App.css';
+import {useNavigate} from "react-router-dom";
 
 export const Register = (props) => {
   const [email, setEmail] = useState('');
@@ -8,6 +10,8 @@ export const Register = (props) => {
   const [whatsapp, setWhatsapp] = useState('');
   const [establishment, setEstablishment] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
 
@@ -37,12 +41,16 @@ export const Register = (props) => {
         }
       });
       alert(resp.data);
+      navigate("/authUserAccount");
+
     } catch(error) {
       alert(error.request.response);
       console.log(error.request.response);
 
       console.log(error.request.status);
     }
+
+
 
   };
 
@@ -70,7 +78,12 @@ export const Register = (props) => {
     setEstablishment(e.target.value);
   };
 
+  const handleOnClick = (e) => {
+    navigate("/login");
+  }
+
   return (
+    <div className="App">
     <div className="form-container">
       <h2>Registre-se</h2>
       <form className="register-form" onSubmit={handleSubmit}>
@@ -131,10 +144,11 @@ export const Register = (props) => {
         /><br></br>
 
         <button type="submit">Finalizar Cadastro</button>
-      </form>
-      <button className="link-btn" onClick={() => props.onFormSwitch('login')}>
+      </form><br></br>
+      <button className="link-btn" onClick={handleOnClick}>
         Já possue uma conta? Entre aqui.
       </button>
+    </div>
     </div>
   );
 };
