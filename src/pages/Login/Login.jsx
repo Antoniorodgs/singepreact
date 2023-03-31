@@ -48,6 +48,7 @@ export const Login = (props) => {
     <div className="App">
     <div className="form-container">
       <h2>Conecte-se</h2>
+      <div className="">
       <form className="login-form" onSubmit={handleSubmit}>
         <label htmlFor="user">Usuário</label>
         <input value={user} onChange={handleUserChange} placeholder="Digite o seu usuário" id="user" name="user"/>
@@ -58,6 +59,7 @@ export const Login = (props) => {
         <button type="submit">Conecte-se</button>
 
       </form><br></br>
+      </div>
       <button className="link-btn" onClick={handleOnClick}>Não tem uma conta? Registre-se aqui.</button>
     </div>
     </div>

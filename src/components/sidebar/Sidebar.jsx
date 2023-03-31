@@ -18,9 +18,6 @@ export const Sidebar = () => {
   return <div className='sidebar'>
      <div className='sidebar__logo'>
         <img src={images.logo} alt='' />
-        <div className="sidebar-close">
-          <i className='bx bx-x'></i>
-        </div>
       </div>
       <div className="sidebar__menu">
         {

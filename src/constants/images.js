@@ -1,5 +1,5 @@
 const images = {
-    logo: require('../assets/images/logo.svg').default,
+    logo: require('../assets/images/logojost.svg').default,
     avt: require('../assets/images/avt.jpg')
 }
 
