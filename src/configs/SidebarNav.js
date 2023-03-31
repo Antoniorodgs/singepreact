@@ -1,9 +1,9 @@
 export const SidebarNav = [
   {
     link: '/dashboard',
-    section: 'dashboard',
+    section: 'dasboard',
     icon: <i className="bx bx-home-alt"></i>,
-    text: 'dashboard',
+    text: 'Home',
   },
   {
     link: '/vender',
@@ -15,24 +15,24 @@ export const SidebarNav = [
     link: '/registrar',
     section: 'registrar',
     icon: <i className="bx bx-cube"></i>,
-    text: 'registrar',
+    text: 'Registrar Produto',
   },
   {
     link: '/estoque',
     section: 'estoque',
     icon: <i className="bx bx-user"></i>,
-    text: 'estoque',
+    text: 'Estoque de Produtos',
   },
   {
     link: '/atualizar',
     section: 'atualizar',
     icon: <i className="bx bx-line-chart"></i>,
-    text: 'atualizar',
+    text: 'Atualizar Produto',
   },
   {
     link: '/deletar',
     section: 'deletar',
     icon: <i className="bx bx-cog"></i>,
-    text: 'deletar',
+    text: 'Deletar Produto',
   },
 ];
