@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './scss/App.scss';
-import { Login } from './Login';
-import { Register } from './Register';
-import { ConfirmCode } from './ConfirmAccount';
+import { Login } from './pages/Login/Login';
+import { Register } from './pages/Register/Register';
+import { ConfirmCode } from './pages/ConfirmAccount';
 import { Dashboard } from './pages/Dashboard';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MainLayout } from './layout/MainLayout';
 import './assets/libs/boxicons-2.1.1/css/boxicons.min.css';
-import { Blank } from './pages/Blank';
+import { Sell } from './pages/Sell';
+import { ContactUs } from './pages/ContactUs';
+import { Stock } from "./pages/Stock";
+import { Update } from "./pages/Update";
+import { RegisterProduct } from './pages/RegisterProduct';
+import { Delete } from './pages/Delete';
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -26,11 +31,12 @@ function App() {
         <Route path="/authUserAccount" element={<ConfirmCode />} />
         <Route path="/dashboard" element={<MainLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="/dashboard/vender" element={<Blank />} />
-          <Route path="/dashboard/registrar" element={<Blank />} />
-          <Route path="/dashboard/estoque" element={<Blank />} />
-          <Route path="/dashboard/atualizar" element={<Blank />} />
-          <Route path="/dashboard/deletar" element={<Blank />} />
+          <Route path="/dashboard/vender" element={<Sell />} />
+          <Route path="/dashboard/registrar" element={<RegisterProduct />} />
+          <Route path="/dashboard/estoque" element={<Stock />} />
+          <Route path="/dashboard/atualizar" element={<Update />} />
+          <Route path="/dashboard/deletar" element={<Delete />} />
+          <Route path="/dashboard/fale-conosco" element={<ContactUs />} />
         </Route>
       </Routes>
     </BrowserRouter>

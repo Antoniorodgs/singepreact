@@ -8,7 +8,7 @@
     flex-direction: column;
     color: $txtColor;
     width: $sideBarWidth;
-    background-color: #ffffff;
+    background-color: #a8de97;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -70,19 +70,19 @@
             }
 
             &:hover {
-                color: $green;
+                color: $white;
 
                 @include tablet {
-                    color: $green;
+                    color: $white;
                 }
             }
 
             &.active {
                 font-weight: 700;
-                color: $green;
+                color: $white;
 
                 @include tablet {
-                    color: $green;
+                    color: $white;
                 }
 
                 &::before {
@@ -92,12 +92,12 @@
                     width: 5px;
                     left: 0;
                     top: 0;
-                    background-color: $green;
+                    background-color: $white;
                     border-top-right-radius: 20px;
                     border-bottom-right-radius: 20px;
 
                     @include tablet {
-                        background-color: $green;
+                        background-color: $white;
                     }
                 }
             }
