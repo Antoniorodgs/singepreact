@@ -15,6 +15,7 @@ import { Stock } from "./pages/Stock";
 import { Update } from "./pages/Update";
 import { RegisterProduct } from './pages/RegisterProduct';
 import { Delete } from './pages/Delete';
+import { Notifications } from "./pages/Notifications";
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -31,6 +32,7 @@ function App() {
         <Route path="/authUserAccount" element={<ConfirmCode />} />
         <Route path="/dashboard" element={<MainLayout />}>
           <Route index element={<Dashboard />} />
+          <Route path="/dashboard/notificacoes" element={<Notifications />} />
           <Route path="/dashboard/vender" element={<Sell />} />
           <Route path="/dashboard/registrar" element={<RegisterProduct />} />
           <Route path="/dashboard/estoque" element={<Stock />} />

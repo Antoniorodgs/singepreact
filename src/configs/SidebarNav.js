@@ -6,6 +6,12 @@ export const SidebarNav = [
     text: 'Início',
   },
   {
+    link: '/dashboard/notificacoes',
+    section: 'notificacoes',
+    icon: <i className="bx bx-bell"></i>,
+    text: 'Notificações'
+  },
+  {
     link: '/dashboard/vender',
     section: 'vender',
     icon: <i className="bx bx-money"></i>,

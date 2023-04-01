@@ -17,7 +17,7 @@ export const Sidebar = () => {
 
   return <div className='sidebar'>
      <div className='sidebar__logo'>
-        <img src={images.logo} alt='' />
+        <img src={images.singepLogo} alt='' />
       </div>
       <div className="sidebar__menu">
         {
