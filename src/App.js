@@ -16,6 +16,7 @@ import { Update } from "./pages/Update";
 import { RegisterProduct } from './pages/RegisterProduct';
 import { Delete } from './pages/Delete';
 import { Notifications } from "./pages/Notifications";
+import { Home } from "./pages/Home/Home";
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -27,6 +28,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/authUserAccount" element={<ConfirmCode />} />
