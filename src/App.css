@@ -44,7 +44,7 @@ label {
 input {
   margin: 0.3125rem 0;
   padding: 1rem;
-  border: none;
+  border: 1px solid #d8d8d8;
   border-radius: 0.625rem;
 }
 
@@ -88,7 +88,8 @@ button:hover {
   width: 100%;
   border-radius: 15px;
   padding: 45px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .containerregistrarproduto header {
@@ -119,8 +120,8 @@ button:hover {
   font-size: 1rem;
   color: #707070;
   margin-top: 8px;
-  border: 1px solid #457a38;
-  border-radius: 15px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
   padding: 0 15px;
 }
 
@@ -137,6 +138,7 @@ button:hover {
   width: 200px;
   background-color: #3b93eb;
   color: #000000;
+  border-radius: 30px;
 }
 
 .btnreg:hover {
@@ -146,20 +148,22 @@ button:hover {
 .btncancel {
   background-color: #ffd447;
   color: #000;
+  border-radius: 30px;
 }
 
 .btncancel:hover {
-  background-color: #ffdb66;
+  background-color: #ffe48d;
 }
 
 .btndelete {
-  background-color: #A52A2A;
+  border-radius: 30px;
+  background-color: #ff2828de;
   color: #000;
   width: 200px;
 }
 
 .btndelete:hover {
-  background-color: #B22222;
+  background-color: #ff6d6d;
 }
 
 .attproduto {
@@ -176,7 +180,8 @@ button:hover {
   max-width: 60%;
   border-radius: 15px;
   padding: 45px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .containerattproduto header {
@@ -197,7 +202,7 @@ button:hover {
 }
 
 .input-boxatt label {
-  color: #333;
+  color: #2e2e2e;
 }
 
 .formatt .input-boxatt input {
@@ -208,8 +213,8 @@ button:hover {
   font-size: 1rem;
   color: #707070;
   margin-top: 8px;
-  border: 1px solid #457a38;
-  border-radius: 15px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
   padding: 0 15px;
 }
 
@@ -226,10 +231,10 @@ button:hover {
   position: relative;
   max-width: 60%;
   width: 100%;
-  
+  background-color: #fff;
   border-radius: 15px;
   padding: 45px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .selectboxassunto {
@@ -240,7 +245,7 @@ button:hover {
   font-size: 1rem;
   color: #707070;
   margin-top: 8px;
-  border: 1px solid #457a38;
+  border: 1px solid #d8d8d8;
   border-radius: 15px;
   padding: 0 15px;
   background-color: #ffffff;
@@ -263,7 +268,7 @@ button:hover {
   font-size: 1rem;
   color: #707070;
   margin-top: 8px;
-  border: 1px solid #457a38;
+  border: 1px solid #d8d8d8;
   border-radius: 15px;
   padding: 0 15px;
 }
@@ -405,8 +410,8 @@ button:hover {
   display: inline-block;
   padding: 16px 32px;
   background: #3b93eb;
-  border-radius: 26px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;

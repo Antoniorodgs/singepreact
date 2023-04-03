@@ -13,10 +13,10 @@ export const Home = (props) => {
           <nav aria-label="primaria">
             <ul className="header-menu font-1-m">
               <li>
-                <a href="#">Entrar</a>
+                <a href="/login">Entrar</a>
               </li>
               <li>
-                <a href="#">Registrar</a>
+                <a href="/register">Registrar</a>
               </li>
             </ul>
           </nav>

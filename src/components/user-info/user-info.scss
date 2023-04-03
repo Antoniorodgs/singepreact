@@ -3,6 +3,7 @@
 .user-info {
     @include flex(center, flex-start);
     background-color: $mainBg;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-radius: $borderRadius;
     height: 50px;
     width: max-content;
