@@ -2,9 +2,10 @@ import React from 'react';
 
 export const Update = () => {
     return (
+        
         <div className='attproduto'>
+            <h2>Atualizar Preço</h2><br /><hr />
             <section className='containerattproduto'>
-                <header> Atualizar Preço </header>
                 <form action="#" className="formatt"><br></br>
             <div className='input-boxatt'>
                 <label htmlFor="">Nome</label>

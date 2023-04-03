@@ -3,6 +3,7 @@ import './user-info.scss'
 
 export const UserInfo = ({ user }) => {
   return (
+  
     <div className='user-info'>
       <div className='user-info__img'>
           <img src={user.img} alt="" />

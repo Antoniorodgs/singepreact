@@ -84,12 +84,12 @@ button:hover {
 
 .containerregistrarproduto {
   position: relative;
-  max-width: 60%;
+  max-width: 70%;
   width: 100%;
   border-radius: 15px;
-  padding: 45px;
-  background-color: white;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  /*box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);*/
+  /*border: 1px solid #cecece;*/
 }
 
 .containerregistrarproduto header {
@@ -120,7 +120,7 @@ button:hover {
   font-size: 1rem;
   color: #707070;
   margin-top: 8px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #e9e9e9;
   border-radius: 10px;
   padding: 0 15px;
 }
@@ -177,11 +177,10 @@ button:hover {
 
 .containerattproduto {
   position: relative;
-  max-width: 60%;
+  max-width: 70%;
   border-radius: 15px;
-  padding: 45px;
-  background-color: #fff;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  /*box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);*/
 }
 
 .containerattproduto header {
@@ -229,12 +228,11 @@ button:hover {
 
 .containercontato {
   position: relative;
-  max-width: 60%;
+  max-width: 70%;
   width: 100%;
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 45px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  /*box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);*/
 }
 
 .selectboxassunto {
@@ -246,7 +244,7 @@ button:hover {
   color: #707070;
   margin-top: 8px;
   border: 1px solid #d8d8d8;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 0 15px;
   background-color: #ffffff;
 }
@@ -270,11 +268,21 @@ button:hover {
   margin-top: 8px;
   border: 1px solid #d8d8d8;
   border-radius: 15px;
-  padding: 0 15px;
+  padding: 5px;
 }
 
 .areacontato label {
   color: #333;
+}
+
+textarea {
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid #dedede;
+  resize: vertical;
+  font-family: 'Roboto';font-size: 16px;
 }
 
 .containercontato header {
@@ -564,4 +572,10 @@ button:hover {
   background-color: #fff;
   padding: 1px;
   width: 1200px;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: #cecece;
 }

@@ -79,10 +79,10 @@ export const RegisterProduct = (props) => {
     return (
 
         <div className='registrarproduto'>
+            <h2>Registrar Produto</h2>< br/><hr/><br />
         <section className='containerregistrarproduto'>
-        <header>Registrar Produto</header>
 
-        <form className="formreg" onSubmit={handleSubmit} id="registerProduct"><br></br>
+        <form className="formreg" onSubmit={handleSubmit} id="registerProduct">
 
             <div className='input-boxreg'>
                 <label htmlFor="">Nome</label>

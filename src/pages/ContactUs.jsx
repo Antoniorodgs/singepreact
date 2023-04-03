@@ -1,10 +1,17 @@
 import React from 'react';
+import { Form, TextArea } from 'semantic-ui-react';
+
+const TextAreaExampleTextArea = () => (
+    <Form>
+      <TextArea placeholder='Tell us more' />
+    </Form>
+)
 
 export const ContactUs = () => {
     return (
         <div className='contato'>
+            <h2>Fale Conosco</h2><br /><hr />
             <section className='containercontato'>
-                <header> Fale Conosco </header>
                 <form action="#" className="formatt"><br></br>
             <div className='input-boxatt'>
                 <label htmlFor="">Assunto</label>
@@ -21,13 +28,14 @@ export const ContactUs = () => {
                     </div>
                 </div>
 
-            </div>
+            </div><br></br>
 
             <div className='areacontato'>
                 <label htmlFor="">Mensagem</label>
-                <input className='areacontato' type="text" placeholder='Conte-nos um pouco mais sobre'/>
+                <textarea className='' type="text" placeholder='Conte-nos um pouco mais sobre'/>
                 
             </div>
+            {/* <TextAreaExampleTextArea /> */}
 
             </form>
 
