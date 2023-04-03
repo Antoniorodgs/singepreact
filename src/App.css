@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   color: black;
-  background-image: linear-gradient(135deg,#457a38,#669b58,#a8de97 48%,#c9ffb7);
+  background-image: linear-gradient(135deg,#c9ffb7, #a8de97 48%,  #669b58, #457a38);
 }
 
 .form-container, .login-form, .register-form {
