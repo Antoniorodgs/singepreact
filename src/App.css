@@ -5,7 +5,8 @@
   align-items: center;
   justify-content: center;
   color: black;
-  background-image: linear-gradient(135deg,#c9ffb7, #a8de97 48%,  #669b58, #457a38);
+  /*background-image: linear-gradient(135deg,#c9ffb7, #a8de97 48%,  #669b58, #457a38);*/
+  background-color: rgb(247, 247, 247);
 }
 
 .form-container, .login-form, .register-form {
@@ -17,7 +18,7 @@
 }
 
 .form-container {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .form-container {
@@ -478,9 +479,10 @@ textarea {
 }
 
 .imagenstratamento img {
-  width: 240px;
-  height: 300px;
-  border-radius: 4px;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 16px;
 }
 
@@ -496,7 +498,7 @@ textarea {
   height: 8px;
   width: 12px;
   margin-right: 8px;
-  background-color: var(--cor-p1);
+  background-color: rgb(247, 247, 247);
   transition: widht 0.2s;
 }
 

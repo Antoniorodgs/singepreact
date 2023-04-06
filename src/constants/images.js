@@ -7,6 +7,10 @@ const images = {
     instagram: require("../assets/images/instagram-p.svg").default,
     facebook: require("../assets/images/facebook-p.svg").default,
     youtube: require("../assets/images/youtube-p.svg").default,
+    gabriel: require("../assets/images/gabriel.jpeg"),
+    amaro: require("../assets/images/amaro.jpeg"),
+    antonio: require("../assets/images/antonio.jpeg")
+
 }
 
 export default images

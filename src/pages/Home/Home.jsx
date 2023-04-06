@@ -48,9 +48,9 @@ export const Home = (props) => {
         <h2 className="containerhome font-1-xxl2">Nosso time e composto<span className="cor-p1">.</span>
         </h2>
         <ul className="imagenstratamento">
-          <li>
+          <li className='imagemEquipe'>
             <a href="">
-              <img src={images.avatar} alt="Amaro" />
+              <img src={images.amaro} alt="Amaro" />
               <h3 className="font-1-xl">Amaro</h3>
               <span className="font-2-m">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
@@ -60,9 +60,9 @@ export const Home = (props) => {
             </a>
           </li>
 
-          <li>
+          <li className='imagemEquipe'>
             <a href="">
-              <img src={images.avatar} alt="Antonio" />
+              <img src={images.antonio} alt="Antonio" />
               <h3 className="font-1-xl">Antonio</h3>
               <span className="font-2-m">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
@@ -72,9 +72,9 @@ export const Home = (props) => {
             </a>
           </li>
 
-          <li>
+          <li className='imagemEquipe'>
             <a href="">
-              <img src={images.avatar} alt="Gabriel" />
+              <img src={images.gabriel} alt="Gabriel" />
               <h3 className="font-1-xl">Gabriel</h3>
               <span className="font-2-m">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
