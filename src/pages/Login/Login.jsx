@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import { images } from '../../constants';
 
 export const Login = (props) => {
   const [user, setUser] = useState('');
@@ -45,6 +46,14 @@ export const Login = (props) => {
   }
   
   return (
+    <div>
+    <header className="header-home">
+        <div className="headerhome containerhome">
+          <a href="#">
+            <img className="imglogo" src={images.singepLogo} alt="Singep" />
+          </a>
+        </div>
+      </header>
     <div className="App">
     <div className="form-container">
       <h2>Conecte-se</h2>
@@ -61,6 +70,7 @@ export const Login = (props) => {
       </form><br></br>
       </div>
       <button className="link-btn" onClick={handleOnClick}>Não tem uma conta? Registre-se aqui.</button>
+    </div>
     </div>
     </div>
   )

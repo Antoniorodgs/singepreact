@@ -12,6 +12,12 @@
   display: flex;
   flex-direction: column;
   width: 25rem;
+  background-color: rgb(247, 247, 247);
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+}
+
+.form-container {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .form-container {
@@ -57,17 +63,6 @@ button {
   color:#006400;
 }
 
-.link-btn {
-  background: none;
-  color: black;
-  text-decoration: underline;
-  width: 25rem;
-}
-
-.link-btn:hover {
-  background: rgba(255, 255, 255, 0.267);
-}
-
 button {
   display: inline-block;
   padding: 16px 32px;
@@ -79,9 +74,19 @@ button {
 }
 
 button:hover {
-  background-color: #ffff;
-  color: #333;
-  
+  background-color: #333333c5;
+}
+
+.link-btn {
+  background: none;
+  color: #3b93eb;
+  text-decoration: underline;
+  width: 25rem;
+  border: none;
+}
+
+.link-btn:hover {
+  background: rgba(255, 255, 255, 0);
 }
 
 .registrarproduto {
@@ -307,6 +312,7 @@ textarea {
 
 .header-home {
   background-color: #a8de97 ;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .headerhome {
@@ -593,4 +599,8 @@ hr {
   height: 1px;
   border: none;
   background-color: #cecece;
+}
+
+h2 {
+  color: #333;
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../../App.css';
 import {useNavigate} from "react-router-dom";
+import { images } from '../../constants';
 
 export const Register = (props) => {
   const [email, setEmail] = useState('');
@@ -83,6 +84,14 @@ export const Register = (props) => {
   }
 
   return (
+    <div>
+        <header className="header-home">
+        <div className="headerhome containerhome">
+          <a href="#">
+            <img className="imglogo" src={images.singepLogo} alt="Singep" />
+          </a>
+        </div>
+      </header>
     <div className="App">
     <div className="form-container">
       <h2>Registre-se</h2>
@@ -148,6 +157,7 @@ export const Register = (props) => {
       <button className="link-btn" onClick={handleOnClick}>
         Já possue uma conta? Entre aqui.
       </button>
+    </div>
     </div>
     </div>
   );
