@@ -14,7 +14,7 @@ export const Register = (props) => {
 
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => { 
 
     e.preventDefault();
     console.log(

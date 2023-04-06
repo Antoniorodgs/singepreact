@@ -18,11 +18,11 @@ export const ContactUs = () => {
                 <div className='columnassunto'>
                     <div className='selectboxassunto'> 
                       <select>
-                        <option>Assunto 1</option>
-                        <option>Assunto 2</option>
-                        <option>Assunto 3</option>
-                        <option>Assunto 4</option>
-                        <option>Assunto 5</option>
+                        <option>Conta</option>
+                        <option>Ajuda</option>
+                        <option>Senha</option>
+                        <option>Sistema</option>
+                        <option>Notificações</option>
                         <option>Outros</option>
                       </select>
                     </div>

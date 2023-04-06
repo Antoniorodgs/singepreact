@@ -85,7 +85,7 @@ export const RegisterProduct = (props) => {
         <form className="formreg" onSubmit={handleSubmit} id="registerProduct">
 
             <div className='input-boxreg'>
-                <label htmlFor="">Nome</label>
+                <label htmlFor="">Produto</label>
                 <input value={name} onChange={handleName} type="text" placeholder='Nome do Produto'/>
 
             </div>
