@@ -7,33 +7,33 @@ const data = {
     },
     summary: [
         {
-            title: 'Sales',
-            subtitle: 'Total sales today',
+            title: 'Total Vendido',
+            subtitle: 'Total vendido Hoje',
             value: '$1.000',
             percent: 70
         },
         {
-            title: 'Orders',
-            subtitle: 'Total orders today',
-            value: '3000',
+            title: 'Data com mais vendas',
+            subtitle: 'Data com mais movimento',
+            value: '20/05',
             percent: 49
         },
         {
-            title: 'Revenue',
-            subtitle: 'Total revenue today',
-            value: '$678',
+            title: 'Produtos Vencidos',
+            subtitle: 'Produtos proximos da validade',
+            value: 'Arroz do Amaro',
             percent: 38
         },
         {
-            title: 'Visits',
-            subtitle: 'Total visits today',
+            title: 'Extra',
+            subtitle: 'Estoque em dia',
             value: '2345',
             percent: 55
         }
     ],
     revenueSummary: {
-        title: 'Revenue',
-        value: '$678',
+        title: 'Produtos mais Vendidos',
+        value: 'Arroz do Amaro',
         chartData: {
             labels: ['May', 'Jun', 'July', 'Aug', 'May', 'Jun', 'July', 'Aug'],
             data: [300, 300, 280, 380, 200, 300, 280, 350]
