@@ -81,13 +81,15 @@ export const Delete = (props) => {
                 <div className='columnassunto'>
                     <div className='selectboxassunto'> 
 
-                      <select value={name} onChange={handleName}>{
+                      <select value={name} onChange={handleName}>
+                        <option>Produto</option>
+                        {
                         productsData.map((prod) => {
                             let name = prod.name;
                             return(
                                 <option>{name}</option>
                             )
-                            
+                        
                         })}
                         </select>
                     </div>
@@ -99,7 +101,9 @@ export const Delete = (props) => {
                 <label htmlFor="">Lote</label>
                 <div className='columnassunto'>
                     <div className='selectboxassunto'> 
-                    <select value={lote} onChange={handleLote}>{
+                    <select value={lote} onChange={handleLote}>
+                        <option>Lote</option>
+                        {
                         productsData.map((prod) => {
                             let lote = prod.lote;
                             return(
