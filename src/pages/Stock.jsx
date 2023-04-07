@@ -35,9 +35,19 @@ export const Stock = () => {
                    productsData.map((prod) => {
                     i++;
                     if(i % 2 == 0) {
-                        return <li className='par'>{prod.name}</li>
+                        return <li className='par'>
+                            <p>{prod.name}</p>
+                            <p>{prod.lote}</p>
+                            <p>{prod.expiry}</p>
+                            <p>{prod.totalun}un</p>
+                        </li>
                     } else {
-                        return <li className='impar'>{prod.name}</li>
+                        return <li className='impar'>
+                            <p>{prod.name}</p>
+                            <p>{prod.lote}</p>
+                            <p>{prod.expiry}</p>
+                            <p>{prod.totalun}un</p>
+                        </li>
                     }
                     
                         

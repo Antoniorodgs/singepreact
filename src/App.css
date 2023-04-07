@@ -638,6 +638,9 @@ li.par {
   padding: 10px;
   color: #333;
   border: rgb(221, 221, 221) 1px solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 li.impar {
@@ -647,6 +650,9 @@ li.impar {
   padding: 10px;
   color: #333;
   border: rgb(199, 199, 199) 1px solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
 }
 
@@ -659,4 +665,10 @@ li.beginEnd {
   border-radius: 12px 12px 0 0;
   border: rgb(210, 210, 210) 1px solid;
 
+}
+
+ul p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
