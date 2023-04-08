@@ -14,12 +14,12 @@ export const RegisterProduct = (props) => {
     const navigate = useNavigate('');
 
     const cancelBottom = (e) => {
-        setName(e.target.value);
-        setPrice(e.target.value);
-        setLote(e.target.value);
-        setExpiry(e.target.value);
-        setTotalun(e.target.value);
-        setTotalkg(e.target.value);
+        setName('');
+        setPrice('');
+        setLote('');
+        setExpiry('');
+        setTotalun('');
+        setTotalkg('');
         //window.location.reload(false);
         //navigate("/dashboard/registrar");
     }
@@ -64,7 +64,7 @@ export const RegisterProduct = (props) => {
             });
             console.log(resp);
             alert(resp.data.body);
-            if(resp.status === 200) navigate("/dashboard/registrar");
+            if(resp.status === 200) cancelBottom();
       
           } catch(error) {
       

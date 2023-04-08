@@ -10,6 +10,11 @@ export const ContactUs = () => {
 
     const navigate = useNavigate();
 
+    const cancelBottom = (e) => {
+      setSubject('');
+      setMessage('');
+    }
+
     const handleSelect = (e) => {
         setSubject(e.target.value);
         console.log(subject);
@@ -40,7 +45,7 @@ export const ContactUs = () => {
             });
     
             alert(resp.data.body);
-            if(resp.status === 200) navigate("/dashboard/fale-conosco");
+            if(resp.status === 200) cancelBottom();
       
           } catch(error) {
       
@@ -62,11 +67,11 @@ export const ContactUs = () => {
                 <div className='columnassunto'>
                     <div className='selectboxassunto'> 
                       <select onChange={handleSelect}>
-                        <option>Conta</option>
                         <option>Ajuda</option>
+                        <option>Conta</option>
+                        <option>Notificações</option>
                         <option>Senha</option>
                         <option>Sistema</option>
-                        <option>Notificações</option>
                         <option>Outros</option>
                       </select>
                     </div>

@@ -8,36 +8,50 @@ export const Update = () => {
 
     const [name, setName] = useState('name');
     const [lote, setLote] = useState('lote');
-    const [newPrice, setNewPrice] = useState('newPrice');
+    const [newPrice, setNewPrice] = useState('');
 
     const [data, setData] = useState({"data": []});
 
     const navigate = useNavigate();
 
-        useEffect(() => {
-            async function fetchData() {
-                try {
-                    const resp = await axios.get('http://localhost:3033/singep/product/products/11959050868');
-                    setData(resp);
-                } catch(err){
-                    console.log(err);
-                }
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const resp = await axios.get('http://localhost:3033/singep/product/products/11959050868');
+                setData(resp);
+            } catch(err){
+                console.log(err);
             }
-            fetchData();
-        }, []);
+        }
+        fetchData();
+    }, []);
 
     const productsData = data.data;
 
+    const cancelBottom = () => {
+
+        setNewPrice('');
+        setName('');
+        setLote('');
+        
+    }
+
     const handlePrice = (e) => {
+
         setNewPrice(e.target.value);
+
     }
 
     const handleLote = (e) => {
+
         setLote(e.target.value);
+
     }
 
     const handleName = (e) => {
+
         setName(e.target.value);
+
     }
 
     const handleSubmit = async (e) => {
@@ -56,7 +70,7 @@ export const Update = () => {
             });
     
             alert(resp.data.body);
-            if(resp.status === 200) navigate("/dashboard/atualizar");
+            if(resp.status === 200) cancelBottom();
       
           } catch(error) {
       
@@ -117,14 +131,14 @@ export const Update = () => {
 
             <div className='input-boxatt'>
                 <label htmlFor="">Novo Preço</label>
-                <input type="text" placeholder='R$' onChange={handlePrice}/>
+                <input value={newPrice} type="text" placeholder='R$' onChange={handlePrice}/>
                 
             </div>
             </form>
 
             <div className='columbtn'>
-            <button className='btncancel'>Cancelar</button>
-            <button className='btnreg' type="submit" form="updateProduct">Atualizar</button>
+            <button className='btncancel' onClick={cancelBottom}>Cancelar</button>
+            <button onClick={cancelBottom} className='btnreg' type="submit" form="updateProduct">Atualizar</button>
             </div>
 
             </section>

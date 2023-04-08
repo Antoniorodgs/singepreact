@@ -12,8 +12,8 @@ export const Delete = (props) => {
 
     const cancelBottom = (e) => {
 
-        setName(e.target.value);
-        setLote(e.target.value);
+        setName('kkk');
+        setLote('kkk');
         //navigate("/dashboard/registrar");
     }
 
@@ -59,7 +59,7 @@ export const Delete = (props) => {
             });
     
             alert(resp.data.body);
-            if(resp.status === 200) navigate("/dashboard/deletar");
+            if(resp.status === 200) cancelBottom();
       
           } catch(error) {
       
@@ -120,7 +120,7 @@ export const Delete = (props) => {
             </form>
 
             <div className='columbtn'>
-            <button className='btncancel'>Cancelar</button>
+            <button className='btncancel' onClick={cancelBottom}>Cancelar</button>
             <button className='btndelete' type="submit" form="deleteProduct">Deletar Produto</button>
             </div>
 
