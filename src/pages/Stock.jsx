@@ -30,7 +30,12 @@ export const Stock = () => {
             
             <h2>Estoque dos Produtos</h2>< br/><hr/><br />
             <ul className='ProdList'>
-                <li className='beginEnd'></li>
+                <li className='impar'>
+                    <p>Produto</p>
+                    <p>Lote</p>
+                    <p>Validade</p>
+                    <p>Total</p>
+                </li>
                 {
                    productsData.map((prod) => {
                     i++;
