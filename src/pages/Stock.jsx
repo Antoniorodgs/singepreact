@@ -29,36 +29,36 @@ export const Stock = () => {
         <div>
             
             <h2>Estoque dos Produtos</h2>< br/><hr/><br />
-            <ul className='ProdList'>
-                <li className='impar'>
-                    <p>Produto</p>
-                    <p>Lote</p>
-                    <p>Validade</p>
-                    <p>Total</p>
-                </li>
+            <table className='ProdList'>
+                <tr className='initial'>
+                    <th>Produto</th>
+                    <th>Lote</th>
+                    <th>Validade</th>
+                    <th>Total(un.)</th>
+                </tr>
                 {
                    productsData.map((prod) => {
                     i++;
                     if(i % 2 == 0) {
-                        return <li className='par'>
-                            <p>{prod.name}</p>
-                            <p>{prod.lote}</p>
-                            <p>{prod.expiry}</p>
-                            <p>{prod.totalun}un</p>
-                        </li>
+                        return <tr className='par'>
+                            <td>{prod.name}</td>
+                            <td>{prod.lote}</td>
+                            <td className='val'>{prod.expiry}</td>
+                            <td>{prod.totalun}</td>
+                        </tr>
                     } else {
-                        return <li className='impar'>
-                            <p>{prod.name}</p>
-                            <p>{prod.lote}</p>
-                            <p>{prod.expiry}</p>
-                            <p>{prod.totalun}un</p>
-                        </li>
+                        return <tr className='impar'>
+                            <td>{prod.name}</td>
+                            <td>{prod.lote}</td>
+                            <td className='val'>{prod.expiry}</td>
+                            <td>{prod.totalun}</td>
+                        </tr>
                     }
                     
                         
                 })
                 }
-            </ul>
+            </table>
             
         </div>
       );

@@ -633,34 +633,59 @@ ul {
 
 li.par {
   width: 100%;
-  height: 50px;
+  height: 40px;
   background-color: white;
-  padding: 10px;
-  color: #333;
+  padding: 5px;
+  color: #5e5e5e;
   border: rgb(221, 221, 221) 1px solid;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-align: center;
+  float: left;
 }
 
-li.impar {
+li.initial {
   width: 100%;
   height: 50px;
-  background-color: rgb(247, 247, 247);
-  padding: 10px;
+  background-color: white;
+  padding: 8px;
   color: #333;
-  border: rgb(199, 199, 199) 1px solid;
+  border: rgb(221, 221, 221) 1px solid;
+  border-radius: 12PX 12PX 0 0;
   display: flex;
   flex-direction: row;
+  float: left;
   justify-content: space-between;
 
 }
 
+tr.impar {
+  background-color: #e2e2e2;
+
+}
+
+table, th, td {
+  width: 70%;    
+  border: rgb(199, 199, 199) 1px solid; 
+  border-collapse: collapse;  
+  padding: 0 2em 0 0.5em;   
+  height: 30px;
+  text-align: left;  
+  font-size: 16px;  
+  
+}
+
+td.val {
+  width: 125px;
+  display:inline-block;
+}
+
 li.beginEnd {
   width: 100%;
-  height: 50px;
+  height: 40px;
   background-color: white;
-  padding: 10px;
+  padding: 5px;
   color: #333;
   border-radius: 12px 12px 0 0;
   border: rgb(210, 210, 210) 1px solid;
@@ -675,4 +700,8 @@ ul p {
 
 .imageQrCamera {
   width: 150px;
+}
+
+th {
+  text-align: left;
 }
