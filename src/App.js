@@ -9,7 +9,7 @@ import { Dashboard } from './pages/Dashboard';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MainLayout } from './layout/MainLayout';
 import './assets/libs/boxicons-2.1.1/css/boxicons.min.css';
-import { Sell } from './pages/Sell';
+import QRCodeWebcame from './pages/QRCodeWebcam';
 import { ContactUs } from './pages/ContactUs';
 import { Stock } from "./pages/Stock";
 import { Update } from "./pages/Update";
@@ -35,7 +35,7 @@ function App() {
         <Route path="/dashboard" element={<MainLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="/dashboard/notificacoes" element={<Notifications />} />
-          <Route path="/dashboard/vender" element={<Sell />} />
+          <Route path="/dashboard/vender" element={<QRCodeWebcame />} />
           <Route path="/dashboard/registrar" element={<RegisterProduct />} />
           <Route path="/dashboard/estoque" element={<Stock />} />
           <Route path="/dashboard/atualizar" element={<Update />} />

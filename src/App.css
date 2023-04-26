@@ -672,3 +672,7 @@ ul p {
   flex-direction: column;
 
 }
+
+.imageQrCamera {
+  width: 150px;
+}
