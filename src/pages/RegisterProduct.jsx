@@ -3,6 +3,8 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
 export const RegisterProduct = (props) => {
+
+    document.documentElement.requestFullscreen();
     
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');

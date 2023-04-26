@@ -27,6 +27,7 @@ ChartJS.register(
 
 
 export const Dashboard = () => {
+  document.documentElement.requestFullscreen();
   return (
     <DashboardWrapper>
           <DashboardWrapperMain>

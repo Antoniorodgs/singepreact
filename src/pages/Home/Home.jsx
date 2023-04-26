@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { images } from '../../constants';
 
 export const Home = (props) => {
+  
   return (
     <div>
       <header className="header-home">

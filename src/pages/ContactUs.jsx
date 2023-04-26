@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 export const ContactUs = () => {
 
+    document.documentElement.requestFullscreen();
+
     let [subject, setSubject] = useState('');
     let [message, setMessage] = useState('');
 

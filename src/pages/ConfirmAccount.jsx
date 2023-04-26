@@ -3,6 +3,7 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 
 export const ConfirmCode = (props) => {
+  document.documentElement.requestFullscreen();
   const [code, setCode] = useState('');
   const navigate = useNavigate();
 

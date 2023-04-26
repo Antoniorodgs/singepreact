@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 export const Delete = (props) => {
+    document.documentElement.requestFullscreen();
     const [name, setName] = useState('name');
     const [lote, setLote] = useState('lote');
 

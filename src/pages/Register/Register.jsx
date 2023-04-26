@@ -5,6 +5,7 @@ import {useNavigate} from "react-router-dom";
 import { images } from '../../constants';
 
 export const Register = (props) => {
+  
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');

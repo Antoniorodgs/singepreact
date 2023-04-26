@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import { images } from '../../constants';
 
 export const Login = (props) => {
+  
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
