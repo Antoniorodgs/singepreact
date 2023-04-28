@@ -21,9 +21,10 @@ export const Delete = (props) => {
     const [data, setData] = useState({"data": []});
 
     useEffect(() => {
+        
         async function fetchData() {
             try {
-                const resp = await axios.get('http://localhost:3033/singep/product/products/11959050868');
+                const resp = await axios.get('http://localhost:3033/singep/products/product/11959050868');
                 setData(resp);
             } catch(err){
                 console.log(err);

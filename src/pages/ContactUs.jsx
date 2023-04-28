@@ -13,6 +13,7 @@ export const ContactUs = () => {
     const navigate = useNavigate();
 
     const cancelBottom = (e) => {
+      console.log(subject, message);
       setSubject('');
       setMessage('');
     }
@@ -90,6 +91,7 @@ export const ContactUs = () => {
             </form>
 
             <div className='columbtn'>
+            <button className='btncancel' onClick={cancelBottom}>Cancelar</button>
             <button type="submit" form="contactUs" className='btnreg'>Enviar</button>
             </div>
 

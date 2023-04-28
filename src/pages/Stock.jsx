@@ -36,23 +36,27 @@ export const Stock = () => {
                     <th>Produto</th>
                     <th>Lote</th>
                     <th>Validade</th>
+                    <th>Preço(R$)</th>
                     <th>Total(un.)</th>
                 </tr>
                 {
                    productsData.map((prod) => {
                     i++;
+                    const date = `${prod.expiry.slice(-2)}/${prod.expiry.slice(5, 7)}/${prod.expiry.slice(0, 4)}`;
                     if(i % 2 == 0) {
                         return <tr className='par'>
                             <td>{prod.name}</td>
                             <td>{prod.lote}</td>
-                            <td className='val'>{prod.expiry}</td>
+                            <td className='val'>{date}</td>
+                            <td>${prod.price}</td>
                             <td>{prod.totalun}</td>
                         </tr>
                     } else {
                         return <tr className='impar'>
                             <td>{prod.name}</td>
                             <td>{prod.lote}</td>
-                            <td className='val'>{prod.expiry}</td>
+                            <td className='val'>{date}</td>
+                            <td>${prod.price}</td>
                             <td>{prod.totalun}</td>
                         </tr>
                     }

@@ -143,7 +143,7 @@ export const Update = () => {
 
             <div className='columbtn'>
             <button className='btncancel' onClick={cancelBottom}>Cancelar</button>
-            <button onClick={cancelBottom} className='btnreg' type="submit" form="updateProduct">Atualizar</button>
+            <button className='btnreg' type="submit" form="updateProduct">Atualizar</button>
             </div>
 
             </section>
