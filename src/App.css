@@ -705,3 +705,74 @@ ul p {
 th {
   text-align: left;
 }
+
+/* CSS VENDA */
+
+.divarea {
+ display: flex;
+ justify-content: left;
+ gap: 30px;
+}
+
+.topodescricao {
+  display: flex;
+  justify-content: space-between;
+  gap: 250px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  color: #000;
+}
+
+.exibirprodutos {
+  background-color: #D7E9B9;
+  height: 430px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.topodireita {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalproduto {
+  display: flex;
+  justify-content: right;
+  gap: 30px;
+}
+
+.valortotal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  color: #000;
+}
+
+.btncancel-2 {
+  background-color: #ff2828de;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+}
+
+.btncancel-2:hover {
+  background-color: #ff6d6d;
+}
+
+.btnvenda {
+  background-color: #3b93eb;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+}
+
+.btnvenda:hover {
+  background-color: #66b3ff;
+}
