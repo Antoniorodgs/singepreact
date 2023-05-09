@@ -14,8 +14,6 @@ export const Update = () => {
 
     const [data, setData] = useState({"data": []});
 
-    const navigate = useNavigate();
-
     useEffect(() => {
         async function fetchData() {
             try {
@@ -120,14 +118,15 @@ export const Update = () => {
                     <select value={lote} onChange={handleLote}>
                         <option>Lote</option>
                         {
-    
                         productsData.map((prod) => {
                             let lote = prod.lote;
-                            return(
-                                <option>{lote}</option>
-                            )
+                            if(prod.name === name){
+                                return(
+                                    <option>{lote}</option>
+                                )
+                            }
+                            
                         })}
-                        
                     </select>
                     </div>
                 </div>
