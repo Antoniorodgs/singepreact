@@ -61,39 +61,27 @@ export const ContactUs = () => {
 
     return (
         <div className='contato'>
-            <h2>Fale Conosco</h2><br /><hr />
+
+            <div id="contactArea">
+              <div id="usCompany">
+                <h4>SINGEP</h4>
+              </div>
+            </div>
+            
             <section className='containercontato'>
-                <form action="#" className="formatt" id="contactUs" onSubmit={handleSubmit}><br></br>
-            <div className='input-boxatt'>
-                <label htmlFor="">Assunto</label>
+                <form action="#" className="formatt" id="contactUs" onSubmit={handleSubmit}>
+                  <div className='input-boxatt'>
+                
+                  </div>
+                  <div id="fieldButton">
+                    <textarea onChange={handleMessage} className='textArea' type="text" placeholder='Conte-nos um pouco mais sobre'/>
+                    <button type="submit" form="contactUs" className='btnreg' id='sendMessage'>Enviar</button>
+                  </div>
+                </form>
 
-                <div className='columnassunto'>
-                    <div className='selectboxassunto'> 
-                      <select onChange={handleSelect}>
-                        <option>Ajuda</option>
-                        <option>Conta</option>
-                        <option>Notificações</option>
-                        <option>Senha</option>
-                        <option>Sistema</option>
-                        <option>Outros</option>
-                      </select>
-                    </div>
+                <div className='columbtn'>
+
                 </div>
-
-            </div><br></br>
-
-            <div className='areacontato'>
-                <label htmlFor="">Mensagem</label>
-                <textarea onChange={handleMessage} className='' type="text" placeholder='Conte-nos um pouco mais sobre'/>
-            </div>
-            {/* <TextAreaExampleTextArea /> */}
-
-            </form>
-
-            <div className='columbtn'>
-            <button className='btncancel' onClick={cancelBottom}>Cancelar</button>
-            <button type="submit" form="contactUs" className='btnreg'>Enviar</button>
-            </div>
 
             </section>
         </div>

@@ -23,18 +23,15 @@ const QRCodeWebcam = () => {
   };
   return (
     <div className="card col-sm-4">
-      <div>
-        <h2>Vender</h2>
-        <br />
-        <hr />
+      <div id="sellBigDiv">
         <br />
 
         <div className="divarea">
           <div>
             <div className="topodescricao">
-              <div><h3>Produto</h3></div>
-              <div><h3>Quantidade</h3></div>
-              <div><h3>Preço</h3></div>
+              <div><h4>Produto</h4></div>
+              <div><h4>Quantidade</h4></div>
+              <div><h4>Preço</h4></div>
             </div>
 
             <br />
@@ -43,7 +40,7 @@ const QRCodeWebcam = () => {
             <br />
             <div className="totalproduto">
               <div className="valortotal">
-                <h3>R$:</h3>
+                <h4>R$:</h4>
               </div>
             </div>
           </div>
@@ -51,7 +48,7 @@ const QRCodeWebcam = () => {
           <div className="topodireita">
             <div>
             <div className="card-header m-1 rounded text-center">
-              <h3>Webcam Image</h3>
+              <h4>Webcam Image</h4>
             </div>
             <div className="card-body text-center imageQrCamera">
               <QrReader
@@ -62,17 +59,17 @@ const QRCodeWebcam = () => {
                 facingMode={'environment'}
               />
             </div>
-            <div className="card-footer rounded mb-1">
+            {/* <div className="card-footer rounded mb-1">
               <h6>WebCam Result: {webcamResult}</h6>
-            </div>
+            </div> */}
             </div>
 
             <div className='btncancel-2'>
-            <h3>Cancelar item</h3>
+            <h4>Cancelar item</h4>
             </div>
 
             <div className='btnvenda'>
-            <h3>Finalizar venda</h3>
+            <h4>Finalizar venda</h4>
             </div>
           </div>
         </div>

@@ -66,7 +66,7 @@ button {
 
 button {
   display: inline-block;
-  padding: 16px 32px;
+  padding: 12px 18px;
   background: #333;
   border-radius: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -241,6 +241,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   padding: 32px;
+
 }
 
 .containercontato {
@@ -292,14 +293,20 @@ button:hover {
   color: #333;
 }
 
-textarea {
-  padding: 10px;
+.areacontato {
   width: 100%;
-  height: 200px;
-  border-radius: 10px;
+}
+
+textarea {
+  padding: 5px;
+  width: 85%;
+  /* height: 50px; */
+  border-radius: 5px;
   border: 1px solid #dedede;
-  resize: vertical;
-  font-family: 'Roboto';font-size: 16px;
+  resize:none;
+  font-family: 'Roboto';font-size: 15px;
+  overflow-y: auto;
+  float: left;
 }
 
 .containercontato header {
@@ -714,9 +721,10 @@ th {
   justify-content: space-between;
   gap: 250px;
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   color: #000;
+  border: 1px solid rgb(204, 204, 204);
 }
 
 .exibirprodutos {
@@ -728,12 +736,13 @@ th {
 
 .topodireita {
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid rgb(204, 204, 204);
 }
 
 .totalproduto {
@@ -748,6 +757,7 @@ th {
   border-radius: 10px;
   width: 200px;
   color: #000;
+  border: 1px solid rgb(204, 204, 204);
 }
 
 .btncancel-2 {
@@ -778,4 +788,48 @@ th {
   max-width: 70%;
   min-width: 70%;
   overflow-y: scroll;
+}
+
+#contactArea {
+  max-width: 70%;
+  min-width: 70%;
+  min-height: 500px;
+  max-height: 500px;
+  background-color: #D7E9B9;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 10px 10px 0 0;
+}
+
+.sidebar {
+  max-width: 25%;
+  padding-left: 0;
+}
+
+.sidebar__menu {
+  margin: 0px;
+}
+
+#usCompany {
+  background: white;
+  height: 40px;
+  border: 0px solid #e6e6e6;
+  border-radius: 10px 10px 0px 0px;
+  padding: 7px 0 0 12px;
+}
+
+#sendMessage {
+  width: 90px;
+  height: 45px;
+  float: right;
+}
+
+#fieldButton {
+  align-items: inline;
+}
+
+#sellBigDiv {
+  width: 80%;
+  border: 2px solid rgb(212, 212, 212);
+  padding: 20px;
+  border-radius: 10px;
 }
