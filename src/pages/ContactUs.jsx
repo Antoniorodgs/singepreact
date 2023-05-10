@@ -3,97 +3,62 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+const { io } = require("socket.io-client");
+
+let socket = io("http://localhost:3033");
+
 export const ContactUs = () => {
 
-    document.documentElement.requestFullscreen();
+    const allMsg = [];
 
-    let [subject, setSubject] = useState('');
     let [message, setMessage] = useState('');
+    let [textArea, setTextArea] = useState('');
+    let [messagesArray, setMessagesArray] = useState([]);
+    
+    socket.on("msg", (data) => {
+      let newMsg = `${data.con.id} : ${data.con.msg}`;
+      setMessage(newMsg);
+      allMsg.push(newMsg);
+      setMessagesArray(allMsg)
+    })
 
-    const navigate = useNavigate();
-
-    const cancelBottom = (e) => {
-      console.log(subject, message);
-      setSubject('');
-      setMessage('');
-    }
-
-    const handleSelect = (e) => {
-        setSubject(e.target.value);
-        console.log(subject);
-    }
-
-    const handleMessage = (e) => {
-      setMessage(e.target.value);
-      console.log(message);
+    const handleTextArea = async (e) => {
+      setTextArea(e.target.value);
     }
 
     const handleSubmit = async (e) => {
 
         e.preventDefault();
-
-        console.log(subject, message);
-
-        let whatsappOwner = "11959050868";
-        subject = JSON.stringify(subject);
-        message = JSON.stringify(message);
-        let objJson = {whatsappOwner, subject, message};
-
-        try {
-      
-            const resp = await axios.post('http://localhost:3033/singep/contactUs/message', objJson, {
-              headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-              }
-            });
-    
-            alert(resp.data.body);
-            if(resp.status === 200) cancelBottom();
-      
-          } catch(error) {
-      
-            let data = JSON.parse(error.request.response);
-            alert(data.body);
-      
-          }
+        socket.emit("message", {msg: textArea, id: socket.id});
 
     }
 
     return (
         <div className='contato'>
-            <h2>Fale Conosco</h2><br /><hr />
+
+            <div id="contactArea">
+              <div id="usCompany">
+                <h4>SINGEP</h4>
+              </div>
+              <h4>Message: </h4><br></br>
+              <p>
+              {
+                message
+              }</p>
+
+            </div>
+            
             <section className='containercontato'>
-                <form action="#" className="formatt" id="contactUs" onSubmit={handleSubmit}><br></br>
-            <div className='input-boxatt'>
-                <label htmlFor="">Assunto</label>
+                <form action="#" className="formatt" id="contactUs" onSubmit={handleSubmit}>
+                  <div id="fieldButton">
+                    <textarea onChange={handleTextArea} className='textArea' type="text" placeholder='Conte-nos um pouco mais sobre'/>
+                    <button type="submit" form="contactUs" className='btnreg' id='sendMessage'>Enviar</button>
+                  </div>
+                </form>
 
-                <div className='columnassunto'>
-                    <div className='selectboxassunto'> 
-                      <select onChange={handleSelect}>
-                        <option>Ajuda</option>
-                        <option>Conta</option>
-                        <option>Notificações</option>
-                        <option>Senha</option>
-                        <option>Sistema</option>
-                        <option>Outros</option>
-                      </select>
-                    </div>
+                <div className='columbtn'>
+
                 </div>
-
-            </div><br></br>
-
-            <div className='areacontato'>
-                <label htmlFor="">Mensagem</label>
-                <textarea onChange={handleMessage} className='' type="text" placeholder='Conte-nos um pouco mais sobre'/>
-            </div>
-            {/* <TextAreaExampleTextArea /> */}
-
-            </form>
-
-            <div className='columbtn'>
-            <button className='btncancel' onClick={cancelBottom}>Cancelar</button>
-            <button type="submit" form="contactUs" className='btnreg'>Enviar</button>
-            </div>
 
             </section>
         </div>

@@ -1,15 +1,12 @@
 import React from 'react';
 import axios from "axios";
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
 
 export const Delete = (props) => {
     document.documentElement.requestFullscreen();
+
     const [name, setName] = useState('name');
     const [lote, setLote] = useState('lote');
-
-    const navigate = useNavigate('');
 
     const cancelBottom = (e) => {
 
@@ -35,9 +32,10 @@ export const Delete = (props) => {
 
     const productsData = data.data;
 
+    const loteOfProd = ['lote'];
+
     const handleName = (e) => {
         setName(e.target.value);
-        console.log(name);
     }
 
     const handleLote = (e) => {
@@ -108,9 +106,11 @@ export const Delete = (props) => {
                         {
                         productsData.map((prod) => {
                             let lote = prod.lote;
-                            return(
-                                <option>{lote}</option>
-                            )
+                            if(prod.name === name){
+                                return(
+                                    <option>{lote}</option>
+                                )
+                            }
                             
                         })}
                     </select>
