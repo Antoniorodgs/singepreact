@@ -676,11 +676,6 @@ table, th, td {
   
 }
 
-td.val {
-  width: 125px;
-  display:inline-block;
-}
-
 li.beginEnd {
   width: 100%;
   height: 40px;

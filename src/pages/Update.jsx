@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 export const Update = () => {
 
-    document.documentElement.requestFullscreen();
+    //document.documentElement.requestFullscreen();
 
     const [name, setName] = useState('name');
     const [lote, setLote] = useState('lote');
@@ -19,7 +19,8 @@ export const Update = () => {
     useEffect(() => {
         async function fetchData() {
             try {
-                const resp = await axios.get('http://localhost:3033/singep/product/products/11959050868');
+                const resp = await axios.get('http://localhost:3033/singep/products/product/11959050868');
+                console.log(resp);
                 setData(resp);
             } catch(err){
                 console.log(err);
@@ -41,18 +42,20 @@ export const Update = () => {
     const handlePrice = (e) => {
 
         setNewPrice(e.target.value);
-
+        console.log(newPrice);
     }
 
     const handleLote = (e) => {
 
         setLote(e.target.value);
+        console.log(lote);
 
     }
 
     const handleName = (e) => {
 
         setName(e.target.value);
+        console.log(name);
 
     }
 
@@ -62,6 +65,7 @@ export const Update = () => {
 
         let whatsappOwner = "11959050868";
         let objJson = {whatsappOwner, name, lote, newPrice};
+        console.log("AQUI: ", typeof name, newPrice);
 
         try {
       
@@ -97,7 +101,6 @@ export const Update = () => {
                         <option>Produto</option>
                         {
                         productsData.map((prod) => {
-                            console.log(prod.name);
                             let name = prod.name;
                             return(
                                 <option>{name}</option>
@@ -140,7 +143,7 @@ export const Update = () => {
 
             <div className='columbtn'>
             <button className='btncancel' onClick={cancelBottom}>Cancelar</button>
-            <button onClick={cancelBottom} className='btnreg' type="submit" form="updateProduct">Atualizar</button>
+            <button className='btnreg' type="submit" form="updateProduct">Atualizar</button>
             </div>
 
             </section>
