@@ -350,7 +350,6 @@ textarea {
 
 .header-menu {
   display: flex;
-  flex-wrap: wrap;
   gap: 40px;
 }
 
@@ -747,8 +746,23 @@ th {
 
 .totalproduto {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
+  align-items: center;
   gap: 30px;
+}
+
+.cancelvenda {
+  justify-content: flex-start;
+  background-color: #ff2828de;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  width: 190px;
+  text-align: center;
+}
+
+.cancelvenda:hover {
+  background-color: #ff6d6d;
 }
 
 .valortotal {
@@ -758,6 +772,7 @@ th {
   width: 200px;
   color: #000;
   border: 1px solid rgb(204, 204, 204);
+  justify-content: flex-end;
 }
 
 .btncancel-2 {
@@ -765,6 +780,8 @@ th {
   padding: 10px;
   border-radius: 10px;
   color: #000000;
+  width: 190px;
+  text-align: center;
 }
 
 .btncancel-2:hover {
@@ -776,6 +793,8 @@ th {
   padding: 10px;
   border-radius: 10px;
   color: #000000;
+  width: 190px;
+  text-align: center;
 }
 
 .btnvenda:hover {
@@ -832,4 +851,61 @@ th {
   border: 2px solid rgb(212, 212, 212);
   padding: 20px;
   border-radius: 10px;
+}
+
+.btndinheiro {
+  background-color: #f3f4fa;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  width: 190px;
+  text-align: center;
+}
+
+.btnlimpa {
+  background-color:#ffd447;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  width: 190px;
+  text-align: center;
+}
+
+.btnlimpa:hover {
+  background-color: #ffe48d;
+}
+
+.totalentrada {
+  background-color:#f3f4fa;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  width: 190px;
+  height: 80px;
+  text-align: center;
+}
+
+.saldotroco {
+  background-color:#f3f4fa;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  width: 190px;
+  height: 80px;
+  text-align: center;
+}
+
+.pmenudireita {
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+}
+
+
+.containervenda {
+  position: relative;
+  max-width: 70%;
+  border-radius: 15px;
+  padding: 30px;
+  /*box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);*/
 }

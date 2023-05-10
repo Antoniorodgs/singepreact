@@ -22,6 +22,8 @@ const QRCodeWebcam = () => {
     }
   };
   return (
+
+    <section className='containervenda'>
     <div className="card col-sm-4">
       <div id="sellBigDiv">
         <br />
@@ -39,6 +41,11 @@ const QRCodeWebcam = () => {
 
             <br />
             <div className="totalproduto">
+
+              <div className='cancelvenda'>
+                CANCELAR VENDA
+              </div>
+
               <div className="valortotal">
                 <h4>R$:</h4>
               </div>
@@ -48,7 +55,7 @@ const QRCodeWebcam = () => {
           <div className="topodireita">
             <div>
             <div className="card-header m-1 rounded text-center">
-              <h4>Webcam Image</h4>
+            
             </div>
             <div className="card-body text-center imageQrCamera">
               <QrReader
@@ -64,17 +71,34 @@ const QRCodeWebcam = () => {
             </div> */}
             </div>
 
-            <div className='btncancel-2'>
-            <h4>Cancelar item</h4>
+            <div className='btndinheiro'>
+              DINHEIRO
+            </div>
+
+              <p className='pmenudireita'>SUB. TOTAL:</p>
+            <div className='totalentrada'>
+             
+            </div>
+
+            <p className='pmenudireita'>TROCO:</p>
+            <div className='saldotroco'>
+              
+            </div>
+
+           
+            
+            <div className='btnlimpa'>
+            <h4>CANCELAR ITEM</h4>
             </div>
 
             <div className='btnvenda'>
-            <h4>Finalizar venda</h4>
+            <h4>FINALIZAR VENDA</h4>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

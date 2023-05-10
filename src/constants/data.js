@@ -77,7 +77,7 @@ const data = {
     ],
     revenueByMonths: {
         labels: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
-        data: [250, 200, 300, 280, 100, 220, 310, 190, 200, 120, 250, 350]
+        data: [250, 100, 300, 280, 100, 220, 310, 190, 200, 120, 250, 350]
     }
 }
 
