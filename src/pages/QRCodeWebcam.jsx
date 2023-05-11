@@ -24,15 +24,15 @@ const QRCodeWebcam = () => {
   return (
 
     <div className='attvenda'>
-      <h2>Caixa</h2><br /><hr />
+      {/* <h2>Caixa</h2><br /><hr /> */}
     <section className='containervenda'>
       
       <div className='divcaixa'> 
         <div className='boxesquerda'>
         <div className="topodescricao">
-              <div><h4>Produto</h4></div>
-              <div><h4>Quantidade</h4></div>
-              <div><h4>Preço</h4></div>
+              <div><h5>Produto</h5></div>
+              <div><h5>Quantidade</h5></div>
+              <div><h5>Preço</h5></div>
             </div>
 
             <br />
@@ -44,11 +44,11 @@ const QRCodeWebcam = () => {
             <div className="totalproduto">
 
               <div className='cancelvenda'>
-                <h4>CANCELAR VENDA</h4>
+                <h5>CANCELAR VENDA</h5>
               </div>
 
               <div className="valortotal">
-                <h4>R$:</h4>
+                <h5>R$:</h5>
               </div>
             </div>
         </div>
@@ -86,11 +86,11 @@ const QRCodeWebcam = () => {
             </div>
 
             <div className='btnlimpa'>
-            <h4>CANCELAR ITEM</h4>
+            <h5>CANCELAR ITEM</h5>
             </div>
 
             <div className='btnvenda'>
-            <h4>FINALIZAR VENDA</h4>
+            <h5>FINALIZAR VENDA</h5>
             </div>
 
             </div>

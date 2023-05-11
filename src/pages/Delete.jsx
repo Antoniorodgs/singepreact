@@ -73,7 +73,7 @@ export const Delete = (props) => {
 
     return (
         <div className='attproduto'>
-            <h2>Deletar Produto</h2><br /><hr />
+            <h3>Deletar Produto</h3><br /><hr />
             <section className='containerattproduto'>
                 <form action="#" className="formatt"  onSubmit={handleSubmit} id="deleteProduct"><br></br>
             <div className='input-boxatt'>

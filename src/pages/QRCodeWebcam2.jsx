@@ -34,7 +34,7 @@ const QRCodeWebcam = () => {
         <div className="divarea">
           <div>
             <div className="topodescricao">
-              <div><h4>Produto</h4></div>
+              <div><h5>Produto</h5></div>
               <div><h4>Quantidade</h4></div>
               <div><h4>Preço</h4></div>
             </div>
@@ -46,11 +46,11 @@ const QRCodeWebcam = () => {
             <div className="totalproduto">
 
               <div className='cancelvenda'>
-                <h4>CANCELAR VENDA</h4>
+                <h5>CANCELAR VENDA</h5>
               </div>
 
               <div className="valortotal">
-                <h4>R$:</h4>
+                <h5>R$:</h5>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ const QRCodeWebcam = () => {
             </div>
 
             <div className='btnvenda'>
-            <h4>FINALIZAR VENDA</h4>
+            <h5>FINALIZAR VENDA</h5>
             </div>
           </div>
         </div>
