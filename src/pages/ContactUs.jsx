@@ -1,11 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-
-const { io } = require("socket.io-client");
-
-let socket = io("http://localhost:3033");
 
 export const ContactUs = () => {
 
@@ -14,13 +9,6 @@ export const ContactUs = () => {
     let [message, setMessage] = useState('');
     let [textArea, setTextArea] = useState('');
     let [messagesArray, setMessagesArray] = useState([]);
-    
-    socket.on("msg", (data) => {
-      let newMsg = `${data.con.id} : ${data.con.msg}`;
-      setMessage(newMsg);
-      allMsg.push(newMsg);
-      setMessagesArray(allMsg)
-    })
 
     const handleTextArea = async (e) => {
       setTextArea(e.target.value);
@@ -29,7 +17,6 @@ export const ContactUs = () => {
     const handleSubmit = async (e) => {
 
         e.preventDefault();
-        socket.emit("message", {msg: textArea, id: socket.id});
 
     }
 

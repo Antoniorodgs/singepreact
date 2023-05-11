@@ -23,10 +23,16 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend
-)
+);
+
+const { io } = require("socket.io-client");
+const socket = io("http://localhost:3033");
 
 
 export const Dashboard = () => {
+
+  socket.emit("invalidProds", {whatsapp: "11959050868"})
+
   document.documentElement.requestFullscreen();
   return (
     <DashboardWrapper>

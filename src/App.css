@@ -674,13 +674,17 @@ tr.impar {
 
 table, th, td {
   width: 100%;    
-  border: rgb(199, 199, 199) 1px solid; 
+  /*border: rgb(199, 199, 199) 1px solid;*/ 
   border-collapse: collapse;  
   padding: 0 2em 0 0.5em;   
   height: 30px;
   text-align: left;  
   font-size: 16px;  
   
+}
+
+table {
+  border: rgb(199, 199, 199) 1px solid;
 }
 
 li.beginEnd {
@@ -832,4 +836,9 @@ th {
   border: 2px solid rgb(212, 212, 212);
   padding: 20px;
   border-radius: 10px;
+}
+
+#stockTableNot {
+  max-width: 70%;
+  min-width: 70%;
 }
