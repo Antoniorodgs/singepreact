@@ -23,36 +23,38 @@ const QRCodeWebcam = () => {
   };
   return (
 
+    <div className='attvenda'>
+      <h2>Caixa</h2><br /><hr />
     <section className='containervenda'>
-    <div className="card col-sm-4">
-      <div id="sellBigDiv">
-        <br />
-
-        <div className="divarea">
-          <div>
-            <div className="topodescricao">
+      
+      <div className='divcaixa'> 
+        <div className='boxesquerda'>
+        <div className="topodescricao">
               <div><h4>Produto</h4></div>
               <div><h4>Quantidade</h4></div>
               <div><h4>Preço</h4></div>
             </div>
 
             <br />
+
             <div className="exibirprodutos"></div>
 
             <br />
+
             <div className="totalproduto">
 
               <div className='cancelvenda'>
-                CANCELAR VENDA
+                <h4>CANCELAR VENDA</h4>
               </div>
 
               <div className="valortotal">
                 <h4>R$:</h4>
               </div>
             </div>
-          </div>
+        </div>
 
-          <div className="topodireita">
+        <div className='boxdireita'>
+            <div className='topodireita'>
             <div>
             <div className="card-header m-1 rounded text-center">
             
@@ -75,18 +77,14 @@ const QRCodeWebcam = () => {
               DINHEIRO
             </div>
 
-              <p className='pmenudireita'>SUB. TOTAL:</p>
+            <p className='pmenudireita'>SUB. TOTAL:</p>
             <div className='totalentrada'>
-             
             </div>
 
             <p className='pmenudireita'>TROCO:</p>
             <div className='saldotroco'>
-              
             </div>
 
-           
-            
             <div className='btnlimpa'>
             <h4>CANCELAR ITEM</h4>
             </div>
@@ -94,11 +92,16 @@ const QRCodeWebcam = () => {
             <div className='btnvenda'>
             <h4>FINALIZAR VENDA</h4>
             </div>
-          </div>
+
+            </div>
+
         </div>
+
       </div>
-    </div>
+
     </section>
+  </div>
+
   );
 };
 

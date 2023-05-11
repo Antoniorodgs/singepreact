@@ -101,7 +101,7 @@ button:hover {
 
 .containerregistrarproduto {
   position: relative;
-  max-width: 70%;
+  max-width: 100%;
   width: 100%;
   border-radius: 15px;
   padding: 30px;
@@ -214,6 +214,7 @@ button:hover {
 
 .formatt .input-boxatt {
   width: 100%;
+
   /*margin-top: 20px;*/
 }
 
@@ -700,7 +701,7 @@ ul p {
 }
 
 .imageQrCamera {
-  width: 150px;
+  width: 170px;
 }
 
 th {
@@ -708,72 +709,6 @@ th {
 }
 
 /* CSS VENDA */
-
-.divarea {
- display: flex;
- justify-content: left;
- gap: 30px;
-}
-
-.topodescricao {
-  display: flex;
-  justify-content: space-between;
-  gap: 250px;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  color: #000;
-  border: 1px solid rgb(204, 204, 204);
-}
-
-.exibirprodutos {
-  background-color: #D7E9B9;
-  height: 430px;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.topodireita {
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid rgb(204, 204, 204);
-}
-
-.totalproduto {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
-
-.cancelvenda {
-  justify-content: flex-start;
-  background-color: #ff2828de;
-  padding: 10px;
-  border-radius: 10px;
-  color: #000000;
-  width: 190px;
-  text-align: center;
-}
-
-.cancelvenda:hover {
-  background-color: #ff6d6d;
-}
-
-.valortotal {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 200px;
-  color: #000;
-  border: 1px solid rgb(204, 204, 204);
-  justify-content: flex-end;
-}
 
 .btncancel-2 {
   background-color: #ff2828de;
@@ -786,19 +721,6 @@ th {
 
 .btncancel-2:hover {
   background-color: #ff6d6d;
-}
-
-.btnvenda {
-  background-color: #3b93eb;
-  padding: 10px;
-  border-radius: 10px;
-  color: #000000;
-  width: 190px;
-  text-align: center;
-}
-
-.btnvenda:hover {
-  background-color: #66b3ff;
 }
 
 #stockTable{
@@ -853,48 +775,6 @@ th {
   border-radius: 10px;
 }
 
-.btndinheiro {
-  background-color: #f3f4fa;
-  padding: 10px;
-  border-radius: 10px;
-  color: #000000;
-  width: 190px;
-  text-align: center;
-}
-
-.btnlimpa {
-  background-color:#ffd447;
-  padding: 10px;
-  border-radius: 10px;
-  color: #000000;
-  width: 190px;
-  text-align: center;
-}
-
-.btnlimpa:hover {
-  background-color: #ffe48d;
-}
-
-.totalentrada {
-  background-color:#f3f4fa;
-  padding: 10px;
-  border-radius: 10px;
-  color: #000000;
-  width: 190px;
-  height: 80px;
-  text-align: center;
-}
-
-.saldotroco {
-  background-color:#f3f4fa;
-  padding: 10px;
-  border-radius: 10px;
-  color: #000000;
-  width: 190px;
-  height: 80px;
-  text-align: center;
-}
-
 .pmenudireita {
   font-size: 14px;
   color: #000;
@@ -907,5 +787,149 @@ th {
   max-width: 70%;
   border-radius: 15px;
   padding: 30px;
-  /*box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);*/
+}
+
+
+
+/* caixa css novo */
+
+.attvenda {
+  margin: 0;
+  box-sizing: 0;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.containervenda {
+  position: relative;
+  max-width: 70%;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.divcaixa {
+  width: 100%;
+}
+
+.topodescricao {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.exibirprodutos {
+  background-color: #D7E9B9;
+  height: 460px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.totalproduto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.cancelvenda {
+  justify-content: flex-start;
+  background-color: #ff2828de;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  width: 180px;
+  text-align: center;
+}
+
+.cancelvenda:hover {
+  background-color: #ff6d6d;
+}
+
+.valortotal {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 180px;
+  color: #000;
+  border: 1px solid rgb(204, 204, 204);
+  justify-content: flex-end;
+}
+
+.topodireita {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.divcaixa {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+ }
+
+ .btndinheiro {
+  background-color: #f3f4fa;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  width: 170px;
+  text-align: center;
+}
+
+.totalentrada {
+  background-color:#f3f4fa;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  width: 170px;
+  height: 60px;
+  text-align: center;
+}
+
+.saldotroco {
+  background-color:#f3f4fa;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  width: 170px;
+  height: 80px;
+  text-align: center;
+}
+
+.btnlimpa {
+  background-color:#ffd447;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  width: 170px;
+  text-align: center;
+}
+
+.btnlimpa:hover {
+  background-color: #ffe48d;
+}
+
+.btnvenda {
+  background-color: #3b93eb;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000000;
+  width: 170px;
+  text-align: center;
+}
+
+.btnvenda:hover {
+  background-color: #66b3ff;
 }

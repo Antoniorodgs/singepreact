@@ -93,6 +93,7 @@ export const Register = (props) => {
           </a>
         </div>
       </header>
+      <br />
     <div className="App">
     <div className="form-container">
       <h2>Registre-se</h2>
