@@ -782,11 +782,11 @@ th {
   border-radius: 10px;
 }
 
-<<<<<<< HEAD
+
 #stockTableNot {
   max-width: 70%;
   min-width: 70%;
-=======
+}
 .pmenudireita {
   font-size: 14px;
   color: #000;
@@ -969,5 +969,4 @@ section.containervenda {
 
 .boxesquerda {
   width: 70%;
->>>>>>> main
 }
