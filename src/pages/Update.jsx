@@ -88,7 +88,7 @@ export const Update = () => {
     return (
         
         <div className='attproduto'>
-            <h2>Atualizar Preço</h2><br /><hr />
+            <h3>Atualizar Preço</h3><br /><hr />
             <section className='containerattproduto'>
                 <form action="#" className="formatt" id="updateProduct" onSubmit={handleSubmit}><br></br>
             <div className='input-boxatt'>

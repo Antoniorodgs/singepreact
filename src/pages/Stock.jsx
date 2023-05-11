@@ -30,7 +30,7 @@ export const Stock = () => {
     return (
         <div>
             
-            <h2>Estoque dos Produtos</h2>< br/><hr/><br />
+            <h3>Estoque dos Produtos</h3>< br/><hr/><br />
             <div id="stockTable">
             <table className='ProdList'>
                 <tr className='initial'>

@@ -22,33 +22,42 @@ const QRCodeWebcam = () => {
     }
   };
   return (
-    <div className="card col-sm-4">
-      <div id="sellBigDiv">
-        <br />
 
-        <div className="divarea">
-          <div>
-            <div className="topodescricao">
-              <div><h4>Produto</h4></div>
-              <div><h4>Quantidade</h4></div>
-              <div><h4>Preço</h4></div>
+    <div className='attvenda'>
+      {/* <h2>Caixa</h2><br /><hr /> */}
+    <section className='containervenda'>
+      
+      <div className='divcaixa'> 
+        <div className='boxesquerda'>
+        <div className="topodescricao">
+              <div><h5>Produto</h5></div>
+              <div><h5>Quantidade</h5></div>
+              <div><h5>Preço</h5></div>
             </div>
 
             <br />
+
             <div className="exibirprodutos"></div>
 
             <br />
+
             <div className="totalproduto">
+
+              <div className='cancelvenda'>
+                <h5>CANCELAR VENDA</h5>
+              </div>
+
               <div className="valortotal">
-                <h4>R$:</h4>
+                <h5>R$:</h5>
               </div>
             </div>
-          </div>
+        </div>
 
-          <div className="topodireita">
+        <div className='boxdireita'>
+            <div className='topodireita'>
             <div>
             <div className="card-header m-1 rounded text-center">
-              <h4>Webcam Image</h4>
+            
             </div>
             <div className="card-body text-center imageQrCamera">
               <QrReader
@@ -64,17 +73,35 @@ const QRCodeWebcam = () => {
             </div> */}
             </div>
 
-            <div className='btncancel-2'>
-            <h4>Cancelar item</h4>
+            <div className='btndinheiro'>
+              DINHEIRO
+            </div>
+
+            <p className='pmenudireita'>SUB. TOTAL:</p>
+            <div className='totalentrada'>
+            </div>
+
+            <p className='pmenudireita'>TROCO:</p>
+            <div className='saldotroco'>
+            </div>
+
+            <div className='btnlimpa'>
+            <h5>CANCELAR ITEM</h5>
             </div>
 
             <div className='btnvenda'>
-            <h4>Finalizar venda</h4>
+            <h5>FINALIZAR VENDA</h5>
             </div>
-          </div>
+
+            </div>
+
         </div>
+
       </div>
-    </div>
+
+    </section>
+  </div>
+
   );
 };
 
