@@ -25,42 +25,6 @@ ChartJS.register(
   Legend
 )
 
-
-export const Dashboard = () => {
-  document.documentElement.requestFullscreen();
-  return (
-    <DashboardWrapper>
-          <DashboardWrapperMain>
-                  <div className="row">
-                    <div className="col-8 col-md-12">
-                      <div className='row'>
-                        {
-                            data.summary.map((item, index) => (
-                                <div key={`summary-${index}`} className="col-6 col-md-6 col-sm-12 mb">
-                                    <SummaryBox item={item}/>
-                                </div>
-                            ))
-                        }
-                      </div>
-                    </div>
-                    <div className="col-4 hide-md">
-                      <SummaryBoxSpecial item={data.revenueSummary} />
-                    </div>
-                  </div>
-
-                  <div className="row">
-                    <div className='col-12'>
-                        <Box>
-                          <RevenueByMonthsChart />
-                        </Box>
-                    </div>
-                  </div>
-
-          </DashboardWrapperMain>
-    </DashboardWrapper>
-  );
-};
-
 const RevenueByMonthsChart = () => {
   const chartOptions = {
     responsive: true,
@@ -109,14 +73,46 @@ const RevenueByMonthsChart = () => {
   return (
     <div>
         <div className='title'>
-            Produtos Mais Vencidos
+            Relatorio Mensal
         </div>
 
         <div>
           <Bar options={chartOptions} data={chartData} height={`300px`} />
         </div>
-
-
       </div>
   )
 }
+
+export const Dashboard = () => {
+  document.documentElement.requestFullscreen();
+  return (
+    <DashboardWrapper>
+          <DashboardWrapperMain>
+                  <div className="row">
+                    <div className="col-8 col-md-12">
+                      <div className='row'>
+                        {
+                            data.summary.map((item, index) => (
+                                <div key={`summary-${index}`} className="col-6 col-md-6 col-sm-12 mb">
+                                    <SummaryBox item={item}/>
+                                </div>
+                            ))
+                        }
+                      </div>
+                    </div>
+                    <div className="col-4 hide-md">
+                      <SummaryBoxSpecial item={data.revenueSummary} />
+                    </div>
+                  </div>
+
+                  <div className="row">
+                    <div className='col-12'>
+                        <Box>
+                          <RevenueByMonthsChart />
+                        </Box>
+                    </div>
+                  </div>
+          </DashboardWrapperMain>
+    </DashboardWrapper>
+  );
+};
