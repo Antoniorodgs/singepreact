@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -20,33 +21,44 @@ export const ContactUs = () => {
 
     }
 
+=======
+
+export const ContactUs = () => {
+>>>>>>> main
     return (
         <div className='contato'>
-
-            <div id="contactArea">
-              <div id="usCompany">
-                <h4>SINGEP</h4>
-              </div>
-              <h4>Message: </h4><br></br>
-              <p>
-              {
-                message
-              }</p>
-
-            </div>
-            
+          <h3>Fale Conosco</h3><br /><hr />
             <section className='containercontato'>
-                <form action="#" className="formatt" id="contactUs" onSubmit={handleSubmit}>
-                  <div id="fieldButton">
-                    <textarea onChange={handleTextArea} className='textArea' type="text" placeholder='Conte-nos um pouco mais sobre'/>
-                    <button type="submit" form="contactUs" className='btnreg' id='sendMessage'>Enviar</button>
-                  </div>
-                </form>
+                
+                
+                <form action="#" className="formatt"><br></br>
+            <div className='input-boxatt'>
+                <label htmlFor="">Assunto</label>
+                <div className='columnassunto'>
+                    <div className='selectboxassunto'> 
+                      <select>
+                        <option>Conta</option>
+                        <option>Ajuda</option>
+                        <option>Senha</option>
+                        <option>Sistema</option>
+                        <option>Notificações</option>
+                        <option>Outros</option>
+                      </select>
+                    </div>
 
-                <div className='columbtn'>
 
                 </div>
-
+            </div><br></br>
+            <div className='areacontato'>
+                <label htmlFor="">Mensagem</label>
+                <textarea className='' type="text" placeholder='Conte-nos um pouco mais sobre'/>
+                
+            </div>
+            {/* <TextAreaExampleTextArea /> */}
+            </form>
+            <div className='columbtn'>
+            <button className='btnreg'>Enviar</button>
+            </div>
             </section>
         </div>
       );

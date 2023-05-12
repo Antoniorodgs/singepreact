@@ -7,36 +7,24 @@ const data = {
     },
     summary: [
         {
-            title: 'Total Vendido',
-            subtitle: 'Total vendido Hoje',
-            value: '$1.000',
-            percent: 70
+            title: 'Total Vendido Hoje',
+            value: '$120,00',
+            percent: 79
         },
-        {
-            title: 'Data com mais vendas',
-            subtitle: 'Data com mais movimento',
-            value: '20/05',
-            percent: 49
-        },
+       
+   
         {
             title: 'Produtos Vencidos',
-            subtitle: 'Produtos proximos da validade',
-            value: 'Arroz do Amaro',
-            percent: 38
-        },
-        {
-            title: 'Extra',
-            subtitle: 'Estoque em dia',
-            value: '2345',
-            percent: 55
+            value: '3',
+            percent: 25
         }
     ],
     revenueSummary: {
-        title: 'Produtos mais Vendidos',
+        title: 'Produto Mais Vendidos',
         value: 'Arroz do Amaro',
         chartData: {
             labels: ['May', 'Jun', 'July', 'Aug', 'May', 'Jun', 'July', 'Aug'],
-            data: [300, 300, 280, 380, 200, 300, 280, 350]
+            data: [50, 100, 100, 120, 150, 200, 280, 350]
         }
     },
     overall: [
