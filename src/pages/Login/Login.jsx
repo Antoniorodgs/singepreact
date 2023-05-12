@@ -54,7 +54,7 @@ export const Login = (props) => {
             <img className="imglogo" src={images.singepLogo} alt="Singep" />
           </a>
         </div>
-      </header>
+    </header>
     <div className="App">
     <div className="form-container">
       <h2>Conecte-se</h2>

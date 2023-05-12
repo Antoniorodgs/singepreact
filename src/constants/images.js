@@ -9,7 +9,10 @@ const images = {
     youtube: require("../assets/images/youtube-p.svg").default,
     gabriel: require("../assets/images/gabriel.jpeg"),
     amaro: require("../assets/images/amaro.jpeg"),
-    antonio: require("../assets/images/antonio.jpeg")
+    antonio: require("../assets/images/antonio.jpeg"),
+    computerConfig: require("../assets/images/computerConfig.png"),
+    womanBuying: require("../assets/images/womanBuying.png"),
+    innovation: require("../assets/images/Innovation.png")
 
 }
 
