@@ -2,11 +2,12 @@ import { useState } from 'react';
 import sound from '../static/bipSound.mp3';
 
 let song = new Audio(sound);
-
+const itens = [];
 const QrReader = require('react-qr-reader');
 const QRCodeWebcam = () => {
   document.documentElement.requestFullscreen();
   const [webcamResult, setWebcamResult] = useState();
+  const [buyingItens, setBuyingItens] = useState([]);
   const webcamError = (error) => {
     if (error) {
       console.log(error);
@@ -19,6 +20,10 @@ const QRCodeWebcam = () => {
     if (result) {
       song.play();
       setWebcamResult(result);
+      console.log(result);
+      itens.push(result);
+      console.log("Itens: ", itens);
+      setBuyingItens(itens);
     }
   };
   return (
@@ -37,7 +42,13 @@ const QRCodeWebcam = () => {
 
             <br />
 
-            <div className="exibirprodutos"></div>
+            <div className="exibirprodutos">
+              {
+                buyingItens.map(item => {
+                  return <p>{item}</p>
+                })
+              }
+            </div>
 
             <br />
 
@@ -61,7 +72,7 @@ const QRCodeWebcam = () => {
             </div>
             <div className="card-body text-center imageQrCamera">
               <QrReader
-                delay={3000}
+                delay={2000}
                 onError={webcamError}
                 onScan={webcamScan}
                 legacyMode={false}
