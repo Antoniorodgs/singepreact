@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -21,10 +20,6 @@ export const ContactUs = () => {
 
     }
 
-=======
-
-export const ContactUs = () => {
->>>>>>> main
     return (
         <div className='contato'>
           <h3>Fale Conosco</h3><br /><hr />
