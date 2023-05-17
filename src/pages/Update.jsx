@@ -6,8 +6,6 @@ import { useNavigate } from 'react-router-dom';
 
 export const Update = () => {
 
-    //document.documentElement.requestFullscreen();
-
     const [name, setName] = useState('name');
     const [lote, setLote] = useState('lote');
     const [newPrice, setNewPrice] = useState('');

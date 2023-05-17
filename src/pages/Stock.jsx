@@ -5,8 +5,6 @@ import { useEffect, useState } from 'react';
 
 export const Stock = () => {
 
-    document.documentElement.requestFullscreen();
-
     const [data, setData] = useState({"data": []});
 
         useEffect(() => {

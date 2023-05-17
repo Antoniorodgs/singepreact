@@ -96,7 +96,7 @@ export const Register = (props) => {
       <br />
     <div className="App">
     <div className="form-container">
-      <h2>Registre-se</h2>
+      <h2>Registre-se</h2><br/>
       <form className="register-form" onSubmit={handleSubmit}>
         <label htmlFor="name">Nome Completo</label>
         <input

@@ -5,7 +5,6 @@ let song = new Audio(sound);
 
 const QrReader = require('react-qr-reader');
 const QRCodeWebcam = () => {
-  document.documentElement.requestFullscreen();
   const [webcamResult, setWebcamResult] = useState();
   const webcamError = (error) => {
     if (error) {
