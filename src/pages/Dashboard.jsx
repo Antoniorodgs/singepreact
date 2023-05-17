@@ -88,6 +88,7 @@ const RevenueByMonthsChart = () => {
 
 export const Dashboard = () => {
   document.documentElement.requestFullscreen();
+  socket.emit("invalidProds", {whatsapp: "11959050868"});
   return (
     <DashboardWrapper>
           <DashboardWrapperMain>

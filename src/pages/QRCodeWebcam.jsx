@@ -66,6 +66,7 @@ const QRCodeWebcam = () => {
                 onScan={webcamScan}
                 legacyMode={false}
                 facingMode={'environment'}
+                videoWidth={150}
               />
             </div>
             {/* <div className="card-footer rounded mb-1">
