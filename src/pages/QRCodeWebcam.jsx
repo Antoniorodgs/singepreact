@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import sound from '../static/bipSound.mp3';
+import QrReader from 'react-qr-reader';
 
 let song = new Audio(sound);
+
 const itens = [];
-const QrReader = require('react-qr-reader');
+
 const QRCodeWebcam = () => {
-  document.documentElement.requestFullscreen();
   const [webcamResult, setWebcamResult] = useState();
   const [buyingItens, setBuyingItens] = useState([]);
   const webcamError = (error) => {
