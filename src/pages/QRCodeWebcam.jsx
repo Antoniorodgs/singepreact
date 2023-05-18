@@ -41,7 +41,6 @@ const QRCodeWebcam = () => {
       song.play();
       setWebcamResult(result)
       await anotherOne(result);
-   
       
     }
 
@@ -67,7 +66,7 @@ const QRCodeWebcam = () => {
               {/* <ul> */}
               {
                 buyingItens.map((item, index) => {
-                  if(index%2 == 0){
+                  if(true /*index%2 === 0*/){
                     return <><tr className='par'>
                             <td>{item[1]}</td>
                             <td>{item[2]}</td>
@@ -89,7 +88,7 @@ const QRCodeWebcam = () => {
               </div>
 
               <div className="valortotal">
-                <h4>R$:{(totalPrice.toFixed(2))/2}</h4>
+                <h4>R$:{(totalPrice.toFixed(2))}</h4>
               </div>
             </div>
         </div>
@@ -102,16 +101,11 @@ const QRCodeWebcam = () => {
             </div>
             <div className="card-body text-center imageQrCamera">
               <QrReader
+                delay={2000} 
+                onError={webcamError}
+                onScan={webcamScan}
                 legacyMode={false}
-                onResult={(result, error) => {
-                  if (!!result) {
-                    webcamScan(result)
-                  }
-        
-                  if (!!error) {
-                    console.info(error);
-                  }
-                }}
+                facingMode={'environment'}
               />
             </div>
             {/* <div className="card-footer rounded mb-1">
