@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import sound from '../static/bipSound.mp3';
 import QrReader from 'react-qr-reader';
+import axios from "axios";
 
 let song = new Audio(sound);
 
@@ -9,24 +10,43 @@ const itens = [];
 const QRCodeWebcam = () => {
   const [webcamResult, setWebcamResult] = useState();
   const [buyingItens, setBuyingItens] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
   const webcamError = (error) => {
     if (error) {
-      console.log(error);
+      console.log("Error: ", error);
     }
   };
 
-  setTimeout(() => {}, 5000);
 
-  const webcamScan = (result) => {
+  const anotherOne = async (result) => {
+    // console.log(result);
+    
+    let aux = result.split("/");
+    const resp = await axios.get(`http://localhost:3033/singep/product/${aux[1]}/${aux[2]}`);
+    console.log(resp);
+    let price = Number(resp.data[0].price);
+    aux.push("r$"+price);
+    itens.push(aux);
+    let newValue = Number(totalPrice) + price;
+    setTotalPrice(newValue);
+    console.log("Itens: ", itens);
+    setBuyingItens(itens);
+    console.log(itens);
+  }
+  let i = 0;
+  
+  const webcamScan = async(result) => {
+    
     if (result) {
       song.play();
-      setWebcamResult(result);
-      console.log(result);
-      itens.push(result);
-      console.log("Itens: ", itens);
-      setBuyingItens(itens);
+      setWebcamResult(result)
+      await anotherOne(result);
+   
+      
     }
+
   };
+
   return (
 
     <div className='attvenda'>
@@ -44,11 +64,20 @@ const QRCodeWebcam = () => {
             <br />
 
             <div className="exibirprodutos">
+              {/* <ul> */}
               {
-                buyingItens.map(item => {
-                  return <p>{item}</p>
-                })
+                buyingItens.map((item, index) => {
+                  if(index%2 == 0){
+                    return <><tr className='par'>
+                            <td>{item[1]}</td>
+                            <td>{item[2]}</td>
+                            <td>{item[4]}</td>
+                        </tr><hr /></>
+                  } else {
+                     
+                  }})
               }
+              {/* </ul> */}
             </div>
 
             <br />
@@ -60,7 +89,7 @@ const QRCodeWebcam = () => {
               </div>
 
               <div className="valortotal">
-                <h5>R$:</h5>
+                <h4>R$:{(totalPrice.toFixed(2))/2}</h4>
               </div>
             </div>
         </div>
@@ -73,12 +102,16 @@ const QRCodeWebcam = () => {
             </div>
             <div className="card-body text-center imageQrCamera">
               <QrReader
-                delay={2000}
-                onError={webcamError}
-                onScan={webcamScan}
                 legacyMode={false}
-                facingMode={'environment'}
-                videoWidth={150}
+                onResult={(result, error) => {
+                  if (!!result) {
+                    webcamScan(result)
+                  }
+        
+                  if (!!error) {
+                    console.info(error);
+                  }
+                }}
               />
             </div>
             {/* <div className="card-footer rounded mb-1">
