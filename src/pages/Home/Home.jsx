@@ -48,7 +48,7 @@ export const Home = (props) => {
       <article className="equipe-lista">
       <h1 className="containerhome font-2-xxl">SINGEP</h1><br/>
       <div className='containerhome'>
-      <img src={images.innovation} className='tratarimg'></img>
+      <img src={images.innovation} className='tratarimg1'></img>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum lobortis neque sed porta. Morbi laoreet ornare vehicula. Suspendisse varius scelerisque justo, sit amet 
         scelerisque arcu. Maecenas ut neque ut diam molestie feugiat. Duis massa nibh, sollicitudin ac ullamcorper a, auctor rhoncus sem. Vestibulum tortor tortor, volutpat in lobortis id,
          cursus vitae ipsum. Curabitur libero massa, ultrices iaculis vehicula eget, placerat eget purus.</p>
@@ -66,35 +66,23 @@ export const Home = (props) => {
             <a href="">
               <img src={images.amaro} alt="Amaro" />
               <h3 className="font-2-xl">Amaro</h3>
-              <span className="font-3-m">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
-                dolorem autem expedita quasi qui vitae, eaque pariatur
-                exercitationem quidem at?
-              </span>
+              <p>Aluno de Engenharia da Computação 10° semestre. Responsável por escrever todos os artigos.</p>
             </a>
           </li>
 
           <li className='imagemEquipe'>
             <a href="">
               <img src={images.antonio} alt="Antonio" />
-              <h3 className="font-2-xl">Antonio</h3>
-              <span className="font-3-m">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
-                dolorem autem expedita quasi qui vitae, eaque pariatur
-                exercitationem quidem at?
-              </span>
+              <h3>Antonio</h3>
+              <p>Aluno de Engenharia da Computação 8° semestre. Responsável pelo Frontend, utilizando o framework ReactJS.</p>
             </a>
           </li>
 
           <li className='imagemEquipe'>
             <a href="https://www.linkedin.com/in/gabriel-rodrigues-fernandes-4824011b7/" target="_blank">
               <img src={images.gabriel} alt="Gabriel" />
-              <h3 className="font-2-xl">Gabriel</h3>
-              <span className="font-3-m">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
-                dolorem autem expedita quasi qui vitae, eaque pariatur
-                exercitationem quidem at?
-              </span>
+              <h3>Gabriel</h3>
+              <p>Aluno de Engenharia da Computação 6° semestre. Responsável pelo Backend, utilizando o framework NodeJS.</p>
             </a>
           </li>
         </ul>
@@ -106,14 +94,14 @@ export const Home = (props) => {
             <div className='footersi-contato'>
                 <h1>Contato</h1>
                 <ul className='font-2-m'>
-                    <li><a href="tel:+5511999999999">+55 11 99999-9999</a></li>
-                    <li><a href="mailto:contato@singep.com">contato@singep.com</a></li>
-                    <li>R. Ali em São Paulo, 00 - Centro</li>
-                    <li>São Paulo - SP</li>
+                    <li><a href="tel:+5511999999999">+55 11 95827-9760</a></li>
+                    <li><a href="mailto:contato@singep.com">SingepTecnologia@gmail.com</a></li>
+                    <li>Estado de São Paulo - Brasil</li>
+                    <li>Guarulhos - SP</li>
                 </ul><br/>
 
                 <div className='footer-redes'>
-                    <a href="#">
+                    <a href="https://www.instagram.com/singeptecnologia/" target="_blank">
                         <img src={images.instagram} alt="instragam" />
                     </a>
 
@@ -121,7 +109,7 @@ export const Home = (props) => {
                         <img src={images.facebook} alt="facebook" />
                     </a>
 
-                    <a href="#">
+                    <a href="https://youtu.be/fwu2IQbM1KM" target="_blank">
                         <img src={images.youtube} alt="youtube" />
                     </a>
                 </div>
@@ -138,8 +126,9 @@ export const Home = (props) => {
                     </nav>
                 </div>
 
-                <h1>Singep © Todos direitos reservados.</h1>
-        </div>
+                
+        </div><br/><br/><br/>
+        <h1 className="allRights">Singep © Todos direitos reservados.</h1>
       </footer>
     </div>
   );
