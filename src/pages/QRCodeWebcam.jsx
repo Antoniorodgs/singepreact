@@ -8,15 +8,22 @@ let song = new Audio(sound);
 const itens = [];
 
 const QRCodeWebcam = () => {
-  const [webcamResult, setWebcamResult] = useState();
+  const [webcamResult, setWebcamResult] = useState("");
   const [buyingItens, setBuyingItens] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+
   const webcamError = (error) => {
     if (error) {
       console.log("Error: ", error);
     }
   };
 
+  const resetAll = (e) => {
+    e.preventDefault();
+    setBuyingItens([]);
+    setTotalPrice(0);
+    setWebcamResult("");
+  }
 
   const anotherOne = async (result) => {
     // console.log(result);
@@ -83,9 +90,9 @@ const QRCodeWebcam = () => {
 
             <div className="totalproduto">
 
-              <div className='cancelvenda'>
-                <h5>CANCELAR VENDA</h5>
-              </div>
+             
+              <button className="cancelvenda" onClick={resetAll}>CANCELAR VENDA</button>
+            
 
               <div className="valortotal">
                 <h4>R$:{(totalPrice.toFixed(2))}</h4>
@@ -125,13 +132,10 @@ const QRCodeWebcam = () => {
             <div className='saldotroco'>
             </div>
 
-            <div className='btnlimpa'>
-            <h5>CANCELAR ITEM</h5>
-            </div>
-
-            <div className='btnvenda'>
-            <h5>FINALIZAR VENDA</h5>
-            </div>
+            <button className='btnlimpa'>CANCELAR ITEM</button>
+                        
+            <button className="btnvenda">FINALIZAR VENDA</button>
+            
 
             </div>
 
