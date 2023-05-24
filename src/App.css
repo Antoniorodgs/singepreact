@@ -6,7 +6,7 @@
   justify-content: center;
   color: black;
   /*background-image: linear-gradient(135deg,#c9ffb7, #a8de97 48%,  #669b58, #457a38);*/
-  background-color: rgb(247, 247, 247);
+  background-color: white;
 }
 
 .form-container, .login-form, .register-form {
@@ -53,11 +53,11 @@
 }
 
 .logRegBorder {
-  border: 2px solid rgba(0, 0, 0, 0.253);
+  border: 2px solid rgba(0, 0, 0, 0.233);
   padding: 20px; 
   position: absolute;
   top: 90px;
-  border-radius: 10px;
+  border-radius: 12px;
   color: black;
 }
 

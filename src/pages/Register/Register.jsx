@@ -93,9 +93,20 @@ export const Register = (props) => {
           </a>
         </div>
       </header>
-      <br />
+      <main className="introducao-bg">
+        <div className="introducao containerhome">
+          <div className="introducao-conteudo">
+            
+            
+          </div>
+          <div className="introducao-imagem">
+            <img className="tratarimg" src={images.introducao} alt="" />
+          </div>
+        </div>
+      </main>
+      
     <div className="App">
-    <div className="logRegBorder">
+    <div className="logRegBorder" style={{backgroundColor: "white"}}>
       <h3>Registre-se</h3><br/>
       <form  className="formTextAlignLeft" onSubmit={handleSubmit}>
         <div className="rowReg">
@@ -160,7 +171,7 @@ export const Register = (props) => {
           onChange={handleConfirmPasswordChange}
         /><br/>
         <br />
-        <a className="link-btn" style={{"padding-left": "0"}} onClick={handleOnClick}>Já possue uma conta? Entre aqui.</a>
+        <a className="link-btn" style={{"padding": "10px"}} onClick={handleOnClick}>Já possue uma conta? Entre aqui.</a>
         </div>
 
        <br></br>

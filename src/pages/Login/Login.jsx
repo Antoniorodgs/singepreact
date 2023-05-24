@@ -55,8 +55,19 @@ export const Login = (props) => {
           </a>
         </div>
     </header>
+    <main className="introducao-bg">
+        <div className="introducao containerhome">
+          <div className="introducao-conteudo">
+            
+            
+          </div>
+          <div className="introducao-imagem">
+            <img className="tratarimg" src={images.introducao} alt="" />
+          </div>
+        </div>
+      </main>
     <div className="App">
-    <div className="divLogReg logRegBorder">
+    <div className="divLogReg logRegBorder" style={{backgroundColor: "white"}}>
       <h3>Conecte-se</h3><br/>
       <div className="">
       <form className="login-form" onSubmit={handleSubmit}>
