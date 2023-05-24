@@ -124,6 +124,9 @@ export const Register = (props) => {
             id="whatsapp"
             onChange={handleWhatsappChange}
           /><br/>
+          <br />
+          <button className="btnLogReg" type="submit">Finalizar Cadastro</button><br/>
+        
 
         </div>
 
@@ -156,13 +159,14 @@ export const Register = (props) => {
           name="confirmPassword"
           onChange={handleConfirmPasswordChange}
         /><br/>
+        <br />
+        <a className="link-btn" style={{"padding-left": "0"}} onClick={handleOnClick}>Já possue uma conta? Entre aqui.</a>
         </div>
 
        <br></br>
       </form>
       <div class="" style={{display: "inline-grid"}}>
-        <button className="btnLogReg" type="submit">Finalizar Cadastro</button><br/>
-        <button className="link-btn" onClick={handleOnClick}>Já possue uma conta? Entre aqui.</button>
+        
       </div>
       
     </div>

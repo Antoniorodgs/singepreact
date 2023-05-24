@@ -53,11 +53,12 @@
 }
 
 .logRegBorder {
-  border: 1px solid black;
-  border: none;
+  border: 2px solid rgba(0, 0, 0, 0.253);
   padding: 20px; 
   position: absolute;
   top: 90px;
+  border-radius: 10px;
+  color: black;
 }
 
 label {
@@ -75,9 +76,9 @@ input {
 }
 
 button.btnLogReg {
-  border: none; 
+  border: 2px solid rgb(0, 0, 0); 
   background-color: #89ff89;
-  padding: 1rem;
+  padding: 0.75rem;
   border-radius: 30px;
   cursor: pointer;
   color:#000000;
@@ -96,7 +97,7 @@ button.btnLogReg:hover {
 button {
   display: inline-block;
   padding: 12px 18px;
-  background: #333;
+  background: black;
   border-radius: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
@@ -104,7 +105,7 @@ button {
 }
 
 button:hover {
-  background-color: #333333c5;
+  background-color: black333c5;
 }
 
 .link-btn {
@@ -113,6 +114,7 @@ button:hover {
   text-decoration: underline;
   width: 25rem;
   border: none;
+  font-size: smaller;
 }
 
 .link-btn:hover {
@@ -140,7 +142,7 @@ button:hover {
 
 .containerregistrarproduto header {
   font-size: 1.5625rem; 
-  color: #333;
+  color: black;
   font-weight: 500;
   text-align: left;
 }
@@ -159,7 +161,7 @@ button:hover {
 }
 
 .input-boxreg label {
-  color: #333;
+  color: black;
 }
 
 .formreg .input-boxreg input {
@@ -237,7 +239,7 @@ button:hover {
 
 .containerattproduto header {
   font-size: 1.5625rem; 
-  color: #333;
+  color: black;
   font-weight: 500;
   text-align: left;
 }
@@ -326,7 +328,7 @@ button:hover {
 }
 
 .areacontato label {
-  color: #333;
+  color: black;
 }
 
 .areacontato {
@@ -347,7 +349,7 @@ textarea {
 
 .containercontato header {
   font-size: 1.5625rem; 
-  color: #333;
+  color: black;
   font-weight: 500;
   text-align: left;
 }
@@ -378,6 +380,7 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  color: black;
 }
 
 .containerhome p {
@@ -391,15 +394,18 @@ textarea {
 
 .header-menu {
   display: flex;
-  gap: 40px;
+  /* gap: 20px; */
 }
 
 .header-menu a {
   display: inline-block;
-  padding: 16px;
-  border-radius: 12px;
-  color: #333;
+  padding: 5px 15px;
+  border-radius: 30px;
+  color: rgb(255, 123, 0);
   position: relative;
+  background-color: #333333;
+  border: 2px solid rgb(255, 145, 0);
+  margin-right: 15px;
 }
 
 .header-menu a:after { 
@@ -409,12 +415,12 @@ textarea {
   width: 0%;
   color: #fff;
   background: #fff;
-  transition: 0.3s;
+  transition: 0.5s;
   position: absolute;
 }
 
 .header-menu a:hover:after {
-  width: 100%;
+  width: 70%;
   color: #fff;
 }
 
@@ -424,7 +430,7 @@ textarea {
 
 .font-1-m {
   font: 500 1.125rem/1.35;
-  color: #333;
+  color: black;
 } 
 
 /*TELA HOME CONTEUDO TOPO*/
@@ -473,7 +479,7 @@ img {
   font-weight: 600;
   font-size: 3rem;
   line-height: 1.125;
-  color: #333;
+  color: black;
 }
 
 .cor-p1 {
@@ -599,7 +605,7 @@ ul.imagenstratamento {
   font-weight: 600;
   font-size: 4rem;
   line-height: 1.125;
-  color: #333;
+  color: black;
 }
 
 /* footer */
@@ -682,13 +688,13 @@ hr {
 }
 
 h2 {
-  color: #333;
+  color: black;
 }
 
 ul.impar, li.prodItemImp {
   width: 70%;
   height: 50px;
-  background-color: #333;
+  background-color: black;
   margin: 2px;
 }
 
@@ -706,7 +712,7 @@ ul {
 .prodList {
   width: 70%;
   height: 100px;
-  background-color: #333;
+  background-color: black;
 }
 
 li.par {
@@ -738,7 +744,7 @@ li.initial {
   height: 50px;
   background-color: white;
   padding: 8px;
-  color: #333;
+  color: black;
   border: rgb(221, 221, 221) 1px solid;
   border-radius: 12PX 12PX 0 0;
   display: flex;
@@ -773,7 +779,7 @@ li.beginEnd {
   height: 40px;
   background-color: white;
   padding: 5px;
-  color: #333;
+  color: black;
   border-radius: 12px 12px 0 0;
   border: rgb(210, 210, 210) 1px solid;
 
