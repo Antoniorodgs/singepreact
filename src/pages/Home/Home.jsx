@@ -74,7 +74,7 @@ export const Home = (props) => {
             <a href="">
               <img src={images.antonio} alt="Antonio" />
               <h4>Antônio Rodrigues</h4><br/>
-              <p>Aluno de Engenharia da Computação 8° semestre. Responsável pelo Frontend, utilizando o framework ReactJS.</p>
+              <p>Aluno de Engenharia da Computação 8° semestre. Responsável pelo Frontend, utilizou o framework ReactJS.</p>
             </a>
           </li>
 
@@ -82,7 +82,7 @@ export const Home = (props) => {
             <a href="https://www.linkedin.com/in/gabriel-rodrigues-fernandes-4824011b7/" target="_blank">
               <img src={images.gabriel} alt="Gabriel" />
               <h4>Gabriel Fernandes</h4><br />
-              <p>Aluno de Engenharia da Computação 6° semestre. Responsável pelo Backend, utilizando o framework NodeJS.</p>
+              <p>Aluno de Engenharia da Computação 6° semestre. Responsável pelo Backend, utilizou o framework NodeJS.</p>
             </a>
           </li>
         </ul>
