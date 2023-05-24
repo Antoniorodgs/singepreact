@@ -35,7 +35,7 @@ export const Home = (props) => {
               Otimize seus processos e faça seu negocio crescer com o sistema
               inteligente de gerenciamento de produtos SINGEP.
             </p>
-            <a className="botao1" href="#">
+            <a className="botao1" href="/#aqui">
               Conheça nossa equipe
             </a>
           </div>
@@ -60,7 +60,7 @@ export const Home = (props) => {
         scelerisque arcu. Maecenas ut neque ut diam molestie feugiat. Duis massa nibh, sollicitudin ac ullamcorper a, auctor rhoncus sem. Vestibulum tortor tortor, volutpat in lobortis id,
          cursus vitae ipsum. Curabitur libero massa, ultrices iaculis vehicula eget, placerat eget purus.</p>
       </div><br/><br/><br/> 
-        <h1 className="containerhome font-2-xxl">Nosso time e composto</h1><br/><br/>
+        <h1 className="containerhome font-2-xxl" id="aqui">Nosso time e composto</h1><br/><br/>
         <ul className="imagenstratamento">
           <li className='imagemEquipe'>
             <a href="">
@@ -74,7 +74,7 @@ export const Home = (props) => {
             <a href="">
               <img src={images.antonio} alt="Antonio" />
               <h4>Antônio Rodrigues</h4><br/>
-              <p>Aluno de Engenharia da Computação 8° semestre. Responsável pelo Frontend, utilizando o framework ReactJS.</p>
+              <p>Aluno de Engenharia da Computação 8° semestre. Responsável pelo Frontend, utilizou o framework ReactJS.</p>
             </a>
           </li>
 
@@ -82,7 +82,7 @@ export const Home = (props) => {
             <a href="https://www.linkedin.com/in/gabriel-rodrigues-fernandes-4824011b7/" target="_blank">
               <img src={images.gabriel} alt="Gabriel" />
               <h4>Gabriel Fernandes</h4><br />
-              <p>Aluno de Engenharia da Computação 6° semestre. Responsável pelo Backend, utilizando o framework NodeJS.</p>
+              <p>Aluno de Engenharia da Computação 6° semestre. Responsável pelo Backend, utilizou o framework NodeJS.</p>
             </a>
           </li>
         </ul>

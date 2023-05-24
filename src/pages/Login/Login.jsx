@@ -55,8 +55,19 @@ export const Login = (props) => {
           </a>
         </div>
     </header>
+    <main className="introducao-bg">
+        <div className="introducao containerhome">
+          <div className="introducao-conteudo">
+            
+            
+          </div>
+          <div className="introducao-imagem">
+            <img className="tratarimg" src={images.introducao} alt="" />
+          </div>
+        </div>
+      </main>
     <div className="App">
-    <div className="divLogReg logRegBorder">
+    <div className="divLogReg logRegBorder" style={{backgroundColor: "white"}}>
       <h3>Conecte-se</h3><br/>
       <div className="">
       <form className="login-form" onSubmit={handleSubmit}>
@@ -64,13 +75,13 @@ export const Login = (props) => {
         <input value={user} onChange={handleUserChange} placeholder="Digite o seu usuário" id="user" name="user"/>
 
         <label htmlFor="password">Senha</label>
-        <input value={password} onChange={handlePassChange} type="password" placeholder="********" id="password" name="password"/><br></br>
+        <input value={password} onChange={handlePassChange} type="password" placeholder="********" id="password" name="password"/><br />
 
         <button className="btnLogReg" type="submit">Conecte-se</button>
 
       </form><br></br>
       </div>
-      <button className="link-btn" onClick={handleOnClick}>Não tem uma conta? Registre-se aqui.</button>
+      <a className="link-btn" sstyle={{"font-size": "smaller"}} onClick={handleOnClick}>Não tem uma conta? Registre-se aqui.</a>
     </div>
     </div>
     </div>
