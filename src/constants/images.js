@@ -12,7 +12,8 @@ const images = {
     antonio: require("../assets/images/antonio.jpeg"),
     computerConfig: require("../assets/images/computerConfig.png"),
     womanBuying: require("../assets/images/womanBuying.png"),
-    innovation: require("../assets/images/Innovation.png")
+    innovation: require("../assets/images/Innovation.png"),
+    foods: require("../assets/images/alimentos.jpg")
 
 }
 

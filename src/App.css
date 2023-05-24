@@ -13,27 +13,30 @@
   display: flex;
   flex-direction: column;
   width: 25rem;
-  background-color: white;
+  /* background-color: rgba(0, 0, 0, 0.137); */
   /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
 }
 
-.form-container {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-}
 
 .form-container {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   width: 30rem;
+  background-color: #ffffff;
+  padding: 3rem;
+    border: 0.0625rem solid white;
+    border-radius: 0.625rem;
+    margin: 0.3125rem;
 }
 
-.register-form {
+/* .register-form {
   display: flex;
   flex-direction: column;
   width: 25rem;
   
-}
-
+} */
+/* 
 @media screen and (min-width: 600px) {
   .form-container {
     padding: 3rem;
@@ -41,27 +44,53 @@
     border-radius: 0.625rem;
     margin: 0.3125rem;
   }
+} */
+.rowReg {
+  margin: 18px 0;
+  display: inline-block;
+  margin: 20px;
+  width: 300px;
+}
+
+.logRegBorder {
+  border: 1px solid black;
+  border: none;
+  padding: 20px; 
+  position: absolute;
+  top: 90px;
 }
 
 label {
   text-align: left;
   padding: 0.15625rem 0;
+  font-size: medium;
 }
 
 input {
   margin: 0.3125rem 0;
-  padding: 1rem;
+  padding: 0.8rem;
   border: 1px solid #d8d8d8;
   border-radius: 0.625rem;
+  width: inherit; 
 }
 
-button {
+button.btnLogReg {
   border: none; 
-  background-color: white;
-  padding: 1.25rem;
-  border-radius: 0.625rem;
+  background-color: #89ff89;
+  padding: 1rem;
+  border-radius: 30px;
   cursor: pointer;
-  color:#006400;
+  color:#000000;
+  font-weight: bolder;
+}
+
+button.btnLogReg:hover {
+  background-color: #71e271;
+}
+
+.divLogReg {
+  position: absolute;
+  top: 100px;
 }
 
 button {
@@ -113,6 +142,10 @@ button:hover {
   font-size: 1.5625rem; 
   color: #333;
   font-weight: 500;
+  text-align: left;
+}
+
+.formTextAlignLeft {
   text-align: left;
 }
 
@@ -322,24 +355,25 @@ textarea {
 /*TELA HOME NAV*/
 
 .header-home {
-  background-color: #a8de97 ;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #89ff89;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  width: 100%;
+  
 }
 
 .headerhome {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: block;
+  /* flex-wrap: wrap;
+  gap: 20px; */
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 5px;
+  background-color: #0000002c;
+  height: 60px;
 }
 
 .containerhome {
   box-sizing: border-box;
-  max-width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -348,7 +382,7 @@ textarea {
 }
 
 .containerhome p {
-  padding-top: 5%;
+  padding-top: 10px;
 }
 
 .imglogo {
@@ -397,17 +431,23 @@ textarea {
 /*TELA HOME CONTEUDO TOPO*/
 
 .introducao-bg {
-  background: #a8de97;
+  background: #89ff89;
   box-shadow: inset 0 -120px #f3f4fa;
+  padding: 0 10% 0 10%;
+  display: flex;
 }
-
+/* 
 .introducao {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0px 40px;
+  gap: 0px 0px;
 
+} */
+
+img {
+  margin: 0;
+  padding: 0;
 }
-
 
 .introducao-conteudo {
   align-self: end;
@@ -415,9 +455,10 @@ textarea {
 }
 
 .introducao img {
-  height: 80%;
-  width: 80%;
-  /* object-fit: cover; */
+  height: 400px;
+  width: 400px;
+  position: relative;
+  top: 50px;
 }
 
 .introducao h1 {
@@ -468,6 +509,8 @@ textarea {
 .equipe-lista {
   padding-top: 60px;
   padding-bottom: 12px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .equipe-lista h2 {
@@ -485,21 +528,22 @@ textarea {
 
 .equipe-lista li {
   min-width: 280px;
-  flex: 1;
+  /* flex: 1; */
   margin: 10px;
 }
 
-.equipe-lista a {
-
+.imagemEquipe {
+  display: flex;
 }
 
+
 .imagenstratamento img {
-  margin: 10px 20px 10 10;
+  display: center;
+  margin: 10px;
   width: 120px;
   height: 120px;
   border-radius: 130px;
-  border: 1px solid rgb(138, 138, 138);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.26);
   margin-bottom: 16px;
 }
 
@@ -507,6 +551,13 @@ textarea {
   display: center;
   text-align: justify;
   text-indent: 1.5em;
+  font-size: smaller;
+}
+
+ul.imagenstratamento {
+  padding: 0 5% 15% 5%;
+  display: flex;
+  justify-content: center;
 }
 
 .equipe-lista h3 {
@@ -515,14 +566,14 @@ textarea {
   align-items: center;
 }
 
-.equipe-lista h3::before {
+/* .equipe-lista h3::before {
   content: "";
   display: inline-block;
   height: 8px;
   width: 12px;
   background-color: rgb(247, 247, 247);
   transition: widht 0.2s;
-}
+} */
 
 .equipe-lista a:hover h3::before {
   width: 24px;
@@ -554,7 +605,7 @@ textarea {
 /* footer */
 
 .footer-bghome {
-  background-color: #a8de97;
+  background-color: #89ff89;
   font-size: 8px;
   padding-bottom: 5em;
 }
@@ -565,6 +616,7 @@ textarea {
   gap: 100px;
   padding-top: 60px;
   padding-bottom: 60px;
+  padding-left: 15%;
   font-size: 8px;
 }
 
@@ -669,6 +721,16 @@ li.par {
   justify-content: space-between;
   text-align: center;
   float: left;
+}
+
+li.imagemEquipe {
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgba(0, 0, 0, 0.096);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  /* background: linear-gradient(to right,  rgb(240, 240, 240) 0%,rgba(255,255,255,1) 50%,rgba(240, 240, 240) 100%); */
 }
 
 li.initial {
@@ -1012,4 +1074,11 @@ section.containervenda {
 
 .allRights {
   text-align: center;
+}
+/* .allHome {
+  margin: 0 10% 0 10%;
+} */
+
+.singep {
+  padding: 0 5% 0 5%;
 }

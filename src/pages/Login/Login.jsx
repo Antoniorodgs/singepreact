@@ -56,8 +56,8 @@ export const Login = (props) => {
         </div>
     </header>
     <div className="App">
-    <div className="form-container">
-      <h2>Conecte-se</h2>
+    <div className="divLogReg logRegBorder">
+      <h3>Conecte-se</h3><br/>
       <div className="">
       <form className="login-form" onSubmit={handleSubmit}>
         <label htmlFor="user">Usuário</label>
@@ -66,7 +66,7 @@ export const Login = (props) => {
         <label htmlFor="password">Senha</label>
         <input value={password} onChange={handlePassChange} type="password" placeholder="********" id="password" name="password"/><br></br>
 
-        <button type="submit">Conecte-se</button>
+        <button className="btnLogReg" type="submit">Conecte-se</button>
 
       </form><br></br>
       </div>

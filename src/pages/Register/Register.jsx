@@ -95,46 +95,49 @@ export const Register = (props) => {
       </header>
       <br />
     <div className="App">
-    <div className="form-container">
-      <h2>Registre-se</h2><br/>
-      <form className="register-form" onSubmit={handleSubmit}>
-        <label htmlFor="name">Nome Completo</label>
-        <input
-          value={name}
-          name="name"
-          id="name"
-          placeholder="Nome"
-          onChange={handleNameChange}
-        />
-        <label htmlFor="email">E-mail</label>
-        <input
-          value={email}
-          type="email"
-          placeholder="Digite o seu e-mail"
-          id="email"
-          name="email"
-          onChange={handleEmailChange}
-        />
+    <div className="logRegBorder">
+      <h3>Registre-se</h3><br/>
+      <form  className="formTextAlignLeft" onSubmit={handleSubmit}>
+        <div className="rowReg">
+          <label htmlFor="name">Nome Completo</label><br />
+          <input
+            value={name}
+            name="name"
+            id="name"
+            placeholder="Nome"
+            onChange={handleNameChange}
+          /><br/>
+          <label htmlFor="email">E-mail</label><br />
+          <input
+            value={email}
+            type="email"
+            placeholder="Digite o seu e-mail"
+            id="email"
+            name="email"
+            onChange={handleEmailChange}
+          /><br/>
+          <label htmlFor="whatsapp">Whatsapp</label><br/>
+          <input
+            value={whatsapp}
+            name="whatsapp"
+            placeholder="1191234-5678"
+            id="whatsapp"
+            onChange={handleWhatsappChange}
+          /><br/>
 
-        <label htmlFor="whatsapp">Whatsapp</label>
-        <input
-          value={whatsapp}
-          name="whatsapp"
-          placeholder="1191234-5678"
-          id="whatsapp"
-          onChange={handleWhatsappChange}
-        />
+        </div>
 
-        <label htmlFor="establishment">Nome do estabelecimento</label>
+        <div className='rowReg'>
+
+        <label htmlFor="establishment">Nome do estabelecimento</label><br/>
         <input
           value={establishment}
           type="name"
           placeholder="Nome fantasia"
           name="establishment"
           onChange={handleEstablishmentChange}
-        />
-
-        <label htmlFor="password">Senha</label>
+        /><br/>
+        <label htmlFor="password">Senha</label><br/>
         <input
           value={password}
           type="password"
@@ -142,9 +145,9 @@ export const Register = (props) => {
           id="password"
           name="password"
           onChange={handlePasswordChange}
-        />
+        /><br/>
 
-        <label htmlFor="confirmPassword">Confirmar senha</label>
+        <label htmlFor="confirmPassword">Confirmar senha</label><br/>
         <input
           value={confirmPassword}
           type="password"
@@ -152,13 +155,16 @@ export const Register = (props) => {
           id="confirmPassword"
           name="confirmPassword"
           onChange={handleConfirmPasswordChange}
-        /><br></br>
+        /><br/>
+        </div>
 
-        <button type="submit">Finalizar Cadastro</button>
-      </form><br></br>
-      <button className="link-btn" onClick={handleOnClick}>
-        Já possue uma conta? Entre aqui.
-      </button>
+       <br></br>
+      </form>
+      <div class="" style={{display: "inline-grid"}}>
+        <button className="btnLogReg" type="submit">Finalizar Cadastro</button><br/>
+        <button className="link-btn" onClick={handleOnClick}>Já possue uma conta? Entre aqui.</button>
+      </div>
+      
     </div>
     </div>
     </div>

@@ -6,7 +6,7 @@
     flex-direction: column;
     color: $txtColor;
     width: $sideBarWidth;
-    background-color: #a8de97;
+    background-color: #89ff89;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     height: 100vh;
     position: fixed;
@@ -69,19 +69,20 @@
             }
 
             &:hover {
-                color: $white;
+                color: $black;
+                font-weight: bolder;
 
                 @include tablet {
-                    color: $white;
+                    color: $black;
                 }
             }
 
             &.active {
                 font-weight: 700;
-                color: $white;
+                color: $black;
 
                 @include tablet {
-                    color: $white;
+                    color: $black;
                 }
 
                 &::before {
@@ -91,12 +92,12 @@
                     width: 5px;
                     left: 0;
                     top: 0;
-                    background-color: $white;
+                    background-color: $black;
                     border-top-right-radius: 20px;
                     border-bottom-right-radius: 20px;
 
                     @include tablet {
-                        background-color: $white;
+                        background-color: $black;
                     }
                 }
             }
