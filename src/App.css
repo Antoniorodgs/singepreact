@@ -375,7 +375,6 @@ textarea {
 .containerhome {
   box-sizing: border-box;
   padding-left: 20px;
-  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -432,7 +431,7 @@ textarea {
 
 .introducao-bg {
   background: #89ff89;
-  box-shadow: inset 0 -120px #f3f4fa;
+  box-shadow: inset 0 -120px #ffffff;
   padding: 0 10% 0 10%;
   display: flex;
 }
@@ -511,6 +510,7 @@ img {
   padding-bottom: 12px;
   padding-left: 10%;
   padding-right: 10%;
+  background-color: #fff;
 }
 
 .equipe-lista h2 {
@@ -1062,9 +1062,9 @@ section.containervenda {
 }
 
 .tratarimg1 {
-  height: 16%;
-  width: 16%;
-  margin-right: 4%;
+  height: 20%;
+  width: 20%;
+  padding-right: 4%;
 }
 
 .footer-informacoes  ul li a {
