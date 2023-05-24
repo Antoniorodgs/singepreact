@@ -35,7 +35,7 @@ export const Home = (props) => {
               Otimize seus processos e faça seu negocio crescer com o sistema
               inteligente de gerenciamento de produtos SINGEP.
             </p>
-            <a className="botao1" href="#">
+            <a className="botao1" href="/#aqui">
               Conheça nossa equipe
             </a>
           </div>
@@ -60,7 +60,7 @@ export const Home = (props) => {
         scelerisque arcu. Maecenas ut neque ut diam molestie feugiat. Duis massa nibh, sollicitudin ac ullamcorper a, auctor rhoncus sem. Vestibulum tortor tortor, volutpat in lobortis id,
          cursus vitae ipsum. Curabitur libero massa, ultrices iaculis vehicula eget, placerat eget purus.</p>
       </div><br/><br/><br/> 
-        <h1 className="containerhome font-2-xxl">Nosso time e composto</h1><br/><br/>
+        <h1 className="containerhome font-2-xxl" id="aqui">Nosso time e composto</h1><br/><br/>
         <ul className="imagenstratamento">
           <li className='imagemEquipe'>
             <a href="">
