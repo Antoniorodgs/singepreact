@@ -1,16 +1,40 @@
-import { useState } from 'react';
-import sound from '../static/bipSound.mp3';
+import { useState, useEffect } from 'react';
 import QrReader from 'react-qr-reader';
 import axios from "axios";
+import bipSound from '../static/bipSound.mp3';
+import womanAlert from "../static/expiredProd.mp3";
 
-let song = new Audio(sound);
+let bipSong = new Audio(bipSound);
+let womanSongAlert = new Audio(womanAlert);
 
 const itens = [];
 
 const QRCodeWebcam = () => {
+
   const [webcamResult, setWebcamResult] = useState("");
   const [buyingItens, setBuyingItens] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [popUp, setPopUp] = useState("popUp");
+
+  useEffect(() => {
+  
+    const notDouble = async (result) => {
+      let aux = result.split("/");
+      const resp = await axios.get(`http://localhost:3033/singep/product/${aux[1]}/${aux[2]}`);
+      console.log(resp);
+      let price = Number(resp.data[0].price);
+      aux.push("r$"+price);
+      itens.push(aux);
+      let newValue = Number(totalPrice) + price;
+      setTotalPrice(newValue);
+      console.log("Itens: ", itens);
+      setBuyingItens(itens);
+      console.log(itens);
+    }
+
+    notDouble(webcamResult);
+  
+  }, [webcamResult])
 
   const webcamError = (error) => {
     if (error) {
@@ -24,30 +48,29 @@ const QRCodeWebcam = () => {
     setTotalPrice(0);
     setWebcamResult("");
   }
-
-  const anotherOne = async (result) => {
-    // console.log(result);
-    
-    let aux = result.split("/");
-    const resp = await axios.get(`http://localhost:3033/singep/product/${aux[1]}/${aux[2]}`);
-    console.log(resp);
-    let price = Number(resp.data[0].price);
-    aux.push("r$"+price);
-    itens.push(aux);
-    let newValue = Number(totalPrice) + price;
-    setTotalPrice(newValue);
-    console.log("Itens: ", itens);
-    setBuyingItens(itens);
-    console.log(itens);
-  }
-  let i = 0;
   
   const webcamScan = async(result) => {
     
-    if (result) {
-      song.play();
-      setWebcamResult(result)
-      await anotherOne(result);
+    const splitedRes = result.split("/"); 
+    let date = new Date();
+    let dateNow = date.toISOString().split('T')[0];
+    let americanDate = splitedRes[3].split("-");
+    americanDate = americanDate[2] + "-" + americanDate[1] + "-" + americanDate[0];
+    dateNow = new Date(dateNow);
+    americanDate = new Date(americanDate);
+ 
+    if(result.slice(0, 6) === "singep" && americanDate < dateNow) {
+      
+      setPopUp("popUpAlert");
+      await womanSongAlert.play();
+      
+      // alert("Produto vencido!");
+      return;
+    }
+    if (result.slice(0, 6) === "singep") {
+      console.log(result);
+      bipSong.play();
+      setWebcamResult(result);
       
     }
 
@@ -70,20 +93,27 @@ const QRCodeWebcam = () => {
             <br />
 
             <div className="exibirprodutos">
-              {/* <ul> */}
+            <table className='ProdList'>
+                <tr className='initial'>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
               {
                 buyingItens.map((item, index) => {
                   if(true /*index%2 === 0*/){
-                    return <><tr className='par'>
+                    return <><tr style={{backgroundColor: "white"}}>
                             <td>{item[1]}</td>
                             <td>{item[2]}</td>
                             <td>{item[4]}</td>
-                        </tr><hr /></>
+                            <td>1</td>
+                        </tr><hr/></>
                   } else {
                      
                   }})
               }
-              {/* </ul> */}
+              </table>
             </div>
 
             <br />
@@ -144,6 +174,11 @@ const QRCodeWebcam = () => {
       </div>
 
     </section>
+    <div className={popUp}>
+      <h4 style={{color: "red"}}>Alerta!</h4>
+      <p>Produto Vencido. Favor retirá-lo de circulação.</p>
+      <button onClick={() => setPopUp("popUp")}>OK</button>
+    </div>
   </div>
 
   );
