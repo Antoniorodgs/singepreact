@@ -24,6 +24,16 @@ export const Notifications = () => {
     const notifyData = data.data;
     console.log("NOTIFYDATA: ", notifyData);
     let i = 0;
+    if(data.data.length === 0){
+        return (
+            <div>
+                <h3>Notificações</h3><br/><hr/>
+                <br /><br/>
+                <p>Você não tem notificações no momento.</p>
+            </div>
+        )
+    } if(data.data.length !== 0){
+
     return (
         <div>
             <h3>Notificações</h3><br/>
@@ -62,4 +72,5 @@ export const Notifications = () => {
             </div>
         </div>
       );
-};
+}
+}
