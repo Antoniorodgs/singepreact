@@ -80,15 +80,11 @@ export const Register = (props) => {
     setEstablishment(e.target.value);
   };
 
-  const handleOnClick = (e) => {
-    navigate("/login");
-  }
-
   return (
     <div>
         <header className="header-home">
         <div className="headerhome containerhome">
-          <a href="#">
+          <a href="/">
             <img className="imglogo" src={images.singepLogo} alt="Singep" />
           </a>
         </div>
@@ -171,7 +167,7 @@ export const Register = (props) => {
           onChange={handleConfirmPasswordChange}
         /><br/>
         <br />
-        <a className="link-btn" style={{"padding": "10px"}} onClick={handleOnClick}>Já possue uma conta? Entre aqui.</a>
+        <a className="link-btn" style={{"padding": "10px"}} href="/login">Já possue uma conta? Entre aqui.</a>
         </div>
 
        <br></br>

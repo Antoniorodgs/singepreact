@@ -17,10 +17,6 @@ export const Login = (props) => {
     setPassword(e.target.value);
   }
 
-  const handleOnClick = (e) => {
-    navigate("/register");
-  }
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -50,7 +46,7 @@ export const Login = (props) => {
     <div>
     <header className="header-home">
         <div className="headerhome containerhome">
-          <a href="#">
+          <a href="/">
             <img className="imglogo" src={images.singepLogo} alt="Singep" />
           </a>
         </div>
@@ -81,7 +77,7 @@ export const Login = (props) => {
 
       </form><br></br>
       </div>
-      <a className="link-btn" sstyle={{"font-size": "smaller"}} onClick={handleOnClick}>Não tem uma conta? Registre-se aqui.</a>
+      <a className="link-btn" href="/register">Não tem uma conta? Registre-se aqui.</a>
     </div>
     </div>
     </div>

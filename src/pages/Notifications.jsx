@@ -50,7 +50,7 @@ export const Notifications = () => {
                    notifyData.map((prod) => {
                     i++;
                     const date = `${prod.expiry.slice(-2)}/${prod.expiry.slice(5, 7)}/${prod.expiry.slice(0, 4)}`;
-                    if(i % 2 == 0) {
+                    if(i % 2 === 0) {
                         return <tr className='par'>
                             <td>{prod.prodName}</td>
                             <td>{prod.prodLote}</td>

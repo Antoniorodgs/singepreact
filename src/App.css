@@ -181,7 +181,7 @@ button:hover {
   column-gap: 20px;
   padding: 20px 0;
   gap: 20px;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 } 
 
