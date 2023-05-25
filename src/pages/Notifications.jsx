@@ -28,7 +28,7 @@ export const Notifications = () => {
         return (
             <div>
                 <h3>Notificações</h3><br/><hr/>
-                <br /><br/>
+                <br />
                 <p>Você não tem notificações no momento.</p>
             </div>
         )
