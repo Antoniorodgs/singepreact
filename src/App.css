@@ -924,10 +924,11 @@ section.containervenda {
 }
 
 .exibirprodutos {
-  background-color: #D7E9B9;
+  background-color: rgb(223 223 223);
   height: 460px;
   padding: 20px;
   border-radius: 10px;
+  border: 1px solid #c1c1c1;
   overflow-y: scroll;
 }
 
