@@ -13,7 +13,8 @@ const images = {
     computerConfig: require("../assets/images/computerConfig.png"),
     womanBuying: require("../assets/images/womanBuying.png"),
     innovation: require("../assets/images/Innovation.png"),
-    foods: require("../assets/images/alimentos.jpg")
+    foods: require("../assets/images/alimentos.jpg"),
+    NotFounded404Cat: require("../assets/images/404.jpg")
 
 }
 
