@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import { images } from '../constants';
 
 export const ConfirmCode = (props) => {
   
@@ -33,25 +34,41 @@ export const ConfirmCode = (props) => {
       navigate("/dashboard");
     }
 
-
-    
-
-    
-    
   }
   
   return (
+    <div>
+      <header className="header-home">
+        <div className="headerhome containerhome">
+          <a href="/">
+            <img className="imglogo" src={images.singepLogo} alt="Singep" />
+          </a>
+        </div>
+    </header>
+    <main className="introducao-bg">
+        <div className="introducao containerhome">
+          <div className="introducao-conteudo">
+            
+            
+          </div>
+          <div className="introducao-imagem">
+            <img className="tratarimg" src={images.introducao} alt="" />
+          </div>
+        </div>
+      </main>
     <div className="App">
-    <div className="form-container">
-      <h2>Autenticar</h2><br></br>
+    <div className="divLogReg logRegBorder" style={{backgroundColor: "white"}}>
+      <h3>Autenticar</h3><br></br>
       <form className="login-form" onSubmit={handleSubmit}>
         <label htmlFor="user">Código</label>
         <input value={code} onChange={handleCode} placeholder="Digite o código enviado no seu whatsapp" id="code" name="code"/><br></br>
 
-        <button type="submit">ENVIAR</button>
+        <button className="btnLogReg" type="submit">Confirmar</button>
+        <br/>
 
       </form><br></br>
-      <button className="link-btn" onClick={handleOnClick}>REENVIAR CÓDIGO.</button>
+      <a className="link-btn" href="/">Reenviar</a>
+    </div>
     </div>
     </div>
   )

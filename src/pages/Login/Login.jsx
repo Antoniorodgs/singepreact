@@ -61,7 +61,7 @@ export const Login = (props) => {
             <img className="tratarimg" src={images.introducao} alt="" />
           </div>
         </div>
-      </main>
+    </main>
     <div className="App">
     <div className="divLogReg logRegBorder" style={{backgroundColor: "white"}}>
       <h3>Conecte-se</h3><br/>

@@ -15,6 +15,7 @@ const QRCodeWebcam = () => {
   const [buyingItens, setBuyingItens] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [popUp, setPopUp] = useState("popUp");
+  const [prod, setProd] = useState("");
 
   useEffect(() => {
   
@@ -60,7 +61,7 @@ const QRCodeWebcam = () => {
     americanDate = new Date(americanDate);
  
     if(result.slice(0, 6) === "singep" && americanDate < dateNow) {
-      
+      setProd(splitedRes[1]);
       setPopUp("popUpAlert");
       await womanSongAlert.play();
       
@@ -78,7 +79,7 @@ const QRCodeWebcam = () => {
 
   return (
 
-    <div className='attvenda'>
+    <div className='attvenda'><br/>
       {/* <h2>Caixa</h2><br /><hr /> */}
     <section className='containervenda'>
       
@@ -89,8 +90,6 @@ const QRCodeWebcam = () => {
               <div><h5>Quantidade</h5></div>
               <div><h5>Preço</h5></div>
             </div>
-
-            <br />
 
             <div className="exibirprodutos">
             <table className='ProdList'>
@@ -175,8 +174,8 @@ const QRCodeWebcam = () => {
 
     </section>
     <div className={popUp}>
-      <h4 style={{color: "red"}}>Alerta!</h4>
-      <p>Produto Vencido. Favor retirá-lo de circulação.</p>
+      {/* <h4 style={{color: "red"}}>Alerta!</h4> */}
+      <p>Produto {prod} vencido. Favor retirá-lo de circulação.</p>
       <button onClick={() => setPopUp("popUp")}>OK</button>
     </div>
   </div>
