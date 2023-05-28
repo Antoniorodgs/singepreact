@@ -33,14 +33,14 @@ export const Home = (props) => {
             </h1>
             <p className="font-2-1">
               Otimize seus processos e faça seu negocio crescer com o sistema
-              inteligente de gerenciamento de produtos SINGEP.
+              inteligente de gerenciamento de produtos alimentícios SINGEP.
             </p>
             <a className="botao1" href="/#aqui">
               Conheça nossa equipe
             </a>
           </div>
           <div className="introducao-imagem">
-            <img className="tratarimg1" src={images.introducao} alt="" />
+            <img className="tratarimg1" src={images.market} alt="" />
           </div>
         </div>
       </main>

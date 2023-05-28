@@ -436,7 +436,7 @@ textarea {
   background: #89ff89;
   box-shadow: inset 0 -120px #ffffff;
   padding: 0 10% 0 10%;
-  display: flex;
+  /* display: flex; */
 }
 /* 
 .introducao {
@@ -457,10 +457,14 @@ img {
 }
 
 .introducao img {
-  height: 400px;
-  width: 400px;
+  height: 270px;
+  width: 380px;
   position: relative;
-  top: 40px;
+  top: 100px;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0;
+  margin: 5px;
+  
 }
 
 .introducao h1 {
@@ -1072,16 +1076,9 @@ section.containervenda {
 .tratarimg {
   height: 20%;
   width: 20%;
-  box-shadow: 40px 40px #65d165;
+  box-shadow: 30px 30px #65d165;
   border: 1px solid rgba(128, 128, 128, 0.377);
   border-radius: 10px;
-}
-
-.tratarimg1 {
-  height: 25%;
-  width: 25%;
-  border-radius: 10px;
-  
 }
 
 .footer-informacoes  ul li a {
