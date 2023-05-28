@@ -53,14 +53,14 @@ export const Login = (props) => {
           </a>
         </div>
     </header>
-    <main className="introducao-bg">
+    <main className="introducao-bg" style={{height: "350px"}}>
         <div className="introducao containerhome">
           <div className="introducao-conteudo">
             
             
           </div>
-          <div className="introducao-imagem">
-            <img className="tratarimg1" src={images.introducao} alt="" />
+          <div className="introducao-imagem" style={{width: "200px"}}>
+            
           </div>
         </div>
     </main>

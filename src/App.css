@@ -56,7 +56,7 @@
   border: 2px solid rgba(0, 0, 0, 0.233);
   padding: 20px; 
   position: absolute;
-  top: 90px;
+  top: 80px;
   border-radius: 12px;
   color: black;
 }
@@ -91,7 +91,7 @@ button.btnLogReg:hover {
 
 .divLogReg {
   position: absolute;
-  top: 100px;
+  top: 90px;
 }
 
 button {

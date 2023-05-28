@@ -91,14 +91,14 @@ export const Register = (props) => {
           </a>
         </div>
       </header>
-      <main className="introducao-bg">
+      <main className="introducao-bg" style={{height: "350px"}}>
         <div className="introducao containerhome">
           <div className="introducao-conteudo">
             
             
           </div>
           <div className="introducao-imagem">
-            <img className="tratarimg" src={images.introducao} alt="" />
+            
           </div>
         </div>
       </main>
