@@ -17,6 +17,7 @@ import { RegisterProduct } from './pages/RegisterProduct';
 import { Delete } from './pages/Delete';
 import { Notifications } from "./pages/Notifications";
 import { Home } from "./pages/Home/Home";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -42,6 +43,7 @@ function App() {
           <Route path="/dashboard/deletar" element={<Delete />} />
           <Route path="/dashboard/fale-conosco" element={<ContactUs />} />
         </Route>
+        <Route path="*" element={<NotFoundPage />}></Route>
       </Routes>
     </BrowserRouter>
   );

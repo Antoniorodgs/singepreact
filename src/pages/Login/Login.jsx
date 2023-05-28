@@ -4,6 +4,8 @@ import {useNavigate} from "react-router-dom";
 import { images } from '../../constants';
 
 export const Login = (props) => {
+
+  document.documentElement.requestFullscreen();
   
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
@@ -58,7 +60,7 @@ export const Login = (props) => {
             
           </div>
           <div className="introducao-imagem">
-            <img className="tratarimg" src={images.introducao} alt="" />
+            <img className="tratarimg1" src={images.introducao} alt="" />
           </div>
         </div>
     </main>

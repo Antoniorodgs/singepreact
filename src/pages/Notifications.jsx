@@ -4,7 +4,7 @@ import axios from 'axios';
 import "../App.css";
 
 export const Notifications = () => {
-
+    document.documentElement.requestFullscreen();
     const [data, setData] = useState({"data": []});
 
     useEffect(() => {
