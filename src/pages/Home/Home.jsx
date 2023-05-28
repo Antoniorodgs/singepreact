@@ -2,6 +2,8 @@ import { images } from '../../constants';
 
 export const Home = (props) => {
   
+  document.documentElement.requestFullscreen();
+  
   return (
     <div className='allHome'>
       <header className="header-home">

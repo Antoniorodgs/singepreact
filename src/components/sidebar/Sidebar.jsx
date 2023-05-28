@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './sidebar.scss'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { images } from '../../constants'
 import { SidebarNav } from '../../configs/SidebarNav';
 
 export const Sidebar = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const location = useLocation()
+  const [activeIndex, setActiveIndex] = useState(0);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const curPath = window.location.pathname.split('/dashboard')[1]
@@ -36,7 +37,7 @@ export const Sidebar = () => {
           <div className="sidebar__menu__item__icon">
             <i className='bx bx-log-out'></i>
           </div>
-          <div className="sidebar__menu__item__txt">
+          <div className="sidebar__menu__item__txt" onClick={() => (navigate("/"))}>
             Sair
           </div>
         </div>

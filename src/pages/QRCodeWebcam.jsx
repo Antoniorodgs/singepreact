@@ -16,9 +16,10 @@ const QRCodeWebcam = () => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [popUp, setPopUp] = useState("popUp");
   const [prod, setProd] = useState("");
+  const [legacy, setLegacy] = useState(true);
 
   useEffect(() => {
-  
+    document.documentElement.requestFullscreen();
     const notDouble = async (result) => {
       let aux = result.split("/");
       const resp = await axios.get(`http://localhost:3033/singep/product/${aux[1]}/${aux[2]}`);
@@ -140,9 +141,10 @@ const QRCodeWebcam = () => {
                 delay={2000} 
                 onError={webcamError}
                 onScan={webcamScan}
-                legacyMode={false}
+                legacyMode={legacy}
                 facingMode={'environment'}
               />
+              <button style={{width: "150px", borderRadius: "5px", background: "green", color: "white", padding: "2px"}} onClick={() => setLegacy(false)}>Iniciar Venda</button>
             </div>
             {/* <div className="card-footer rounded mb-1">
               <h6>WebCam Result: {webcamResult}</h6>
@@ -163,7 +165,7 @@ const QRCodeWebcam = () => {
 
             <button className='btnlimpa'>CANCELAR ITEM</button>
                         
-            <button className="btnvenda">FINALIZAR VENDA</button>
+            <button className="btnvenda" onClick={() => (setLegacy(true))}>FINALIZAR VENDA</button>
             
 
             </div>

@@ -4,6 +4,8 @@ import {useNavigate} from "react-router-dom";
 import { images } from '../../constants';
 
 export const Login = (props) => {
+
+  document.documentElement.requestFullscreen();
   
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');

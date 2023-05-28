@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from 'react';
 
 export const Delete = (props) => {
-
+    document.documentElement.requestFullscreen();
     const [name, setName] = useState('name');
     const [lote, setLote] = useState('lote');
 

@@ -5,6 +5,8 @@ import {useNavigate} from "react-router-dom";
 import { images } from '../../constants';
 
 export const Register = (props) => {
+
+  document.documentElement.requestFullscreen();
   
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

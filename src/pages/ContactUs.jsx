@@ -4,6 +4,8 @@ import axios from 'axios';
 
 export const ContactUs = () => {
 
+    document.documentElement.requestFullscreen();
+
     const allMsg = [];
 
     let [message, setMessage] = useState('');

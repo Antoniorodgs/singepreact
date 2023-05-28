@@ -3,9 +3,29 @@ import { Link } from "react-router-dom"
 
 export const NotFoundPage = () => {
     return (
-        <div style={{textAlign: "center", padding: "1%", background: "#000", minHeight: "100vh"}}>
-            <img style={{width: "40%", height: "20%", borderRadius: "15px", border: "white 5px solid"}} src={images.NotFounded404Cat} alt="" /><br /><br />
-            <Link to="/" style={{background: "white", padding: "10px", borderRadius: "10px", color: "black", fontWeight: "bolder", border: "2px solid gray"}}>Tela Inicial</Link>
+        <div>
+            <header className="header-home">
+                <div className="headerhome containerhome">
+                <a href="/">
+                    <img className="imglogo" src={images.singepLogo} alt="Singep" />
+                </a>
+                </div>
+            </header>
+            <main className="introducao-bg">
+                <div className="introducao containerhome">
+                    <div className="introducao-conteudo">
+                
+                
+                    </div>
+                    <div>
+                         <img src={images.NotFounded404Cat} alt="" style={{width: "100%", height: "100%", padding: "0px", borderRadius: "15px", boxShadow: "0 0 8px gray"}}/>
+                    </div>
+                </div>
+                <p></p>
+            </main>
+            <br/>
+            <br/>
+            
         </div>
     )
 }
