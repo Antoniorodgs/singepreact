@@ -40,7 +40,7 @@ export const Home = (props) => {
             </a>
           </div>
           <div className="introducao-imagem">
-            <img className="tratarimg1" src={images.market} alt="" />
+            <img className="tratarimg1" src={images.market2} alt="" />
           </div>
         </div>
       </main>

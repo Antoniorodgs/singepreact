@@ -15,7 +15,8 @@ const images = {
     innovation: require("../assets/images/Innovation.png"),
     foods: require("../assets/images/alimentos.jpg"),
     NotFounded404Cat: require("../assets/images/404.jpg"),
-    market: require("../assets/images/market.png")
+    market: require("../assets/images/market.png"),
+    market2: require("../assets/images/market2.png")
 
 }
 
