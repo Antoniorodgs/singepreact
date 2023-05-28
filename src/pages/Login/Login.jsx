@@ -60,7 +60,7 @@ export const Login = (props) => {
             
           </div>
           <div className="introducao-imagem">
-            <img className="tratarimg" src={images.introducao} alt="" />
+            <img className="tratarimg1" src={images.introducao} alt="" />
           </div>
         </div>
     </main>
