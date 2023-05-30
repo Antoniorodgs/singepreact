@@ -76,7 +76,7 @@ input {
 }
 
 button.btnLogReg {
-  border: 2px solid rgb(0, 0, 0); 
+  /* border: 2px solid rgb(0, 0, 0);  */
   background-color: #89ff89;
   padding: 0.75rem;
   border-radius: 30px;
@@ -103,6 +103,7 @@ button {
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
+  border: none;
 }
 
 button:hover {
@@ -201,8 +202,7 @@ button:hover {
   background-color: #ffd447;
   color: #000;
   border-radius: 30px;
-  font-weight: bold;
-  padding: 10px;
+  padding: 12px;
 }
 
 .btncancel:hover {
