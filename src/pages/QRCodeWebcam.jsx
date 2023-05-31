@@ -25,7 +25,7 @@ const QRCodeWebcam = () => {
       const resp = await axios.get(`http://localhost:3033/singep/product/${aux[1]}/${aux[2]}`);
       console.log(resp);
       let price = Number(resp.data[0].price);
-      aux.push("r$"+price);
+      aux.push("R$"+price);
       itens.push(aux);
       let newValue = Number(totalPrice) + price;
       setTotalPrice(newValue);
@@ -88,8 +88,9 @@ const QRCodeWebcam = () => {
         <div className='boxesquerda'>
         <div className="topodescricao">
               <div><h5>Produto</h5></div>
-              <div><h5>Quantidade</h5></div>
+              <div><h5>Lote</h5></div>
               <div><h5>Preço</h5></div>
+              <div><h5>Quantidade</h5></div>
             </div>
 
             <div className="exibirprodutos">
@@ -103,7 +104,7 @@ const QRCodeWebcam = () => {
               {
                 buyingItens.map((item, index) => {
                   if(true /*index%2 === 0*/){
-                    return <><tr style={{backgroundColor: "white"}}>
+                    return <><tr style={{backgroundColor: "#282828"}}>
                             <td>{item[1]}</td>
                             <td>{item[2]}</td>
                             <td>{item[4]}</td>

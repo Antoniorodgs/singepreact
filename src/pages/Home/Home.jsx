@@ -9,7 +9,7 @@ export const Home = (props) => {
       <header className="header-home">
         <div className="headerhome containerhome">
 
-          <img className="imglogo" src={images.singepLogo} alt="Singep" />
+          <img className="imglogo" src={images.SINGEPQRLOGO} alt="Singep" />
 
           <nav aria-label="primaria">
             <ul className="header-menu font-1-m">
@@ -90,7 +90,10 @@ export const Home = (props) => {
 
       <footer className='footer-bghome'>
         <div className='footersi containerhome'>
-            <img className="imglogo" src={images.singepLogo} alt="Singep" />
+          <a href="/">
+            <img className="imglogo" src={images.SINGEPQRLOGO} alt="Singep" />
+          </a>
+
             <div className='footersi-contato'>
                 <h1>Contato</h1>
                 <ul className='font-2-m'>

@@ -86,9 +86,10 @@ export const Register = (props) => {
     <div>
         <header className="header-home">
         <div className="headerhome containerhome">
-          <a href="/">
-            <img className="imglogo" src={images.singepLogo} alt="Singep" />
-          </a>
+        <a href="/">
+          <img className="imglogo" src={images.SINGEPQRLOGO} alt="Singep" />
+        </a>
+
         </div>
       </header>
       <main className="introducao-bg" style={{height: "350px"}}>

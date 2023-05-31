@@ -6,7 +6,7 @@ export const NotFoundPage = () => {
             <header className="header-home">
                 <div className="headerhome containerhome">
                 <a href="/">
-                    <img className="imglogo" src={images.singepLogo} alt="Singep" />
+                    <img className="imglogo" src={images.SINGEPQRLOGO} alt="Singep" />
                 </a>
                 </div>
             </header>
