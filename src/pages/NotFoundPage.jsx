@@ -16,12 +16,13 @@ export const NotFoundPage = () => {
                 
                 
                     </div>
-                    <div>
-                         <img src={images.NotFounded404Cat} alt="" style={{width: "100%", height: "100%", padding: "0px", borderRadius: "15px", boxShadow: "0 0 8px gray"}}/>
-                    </div>
+
                 </div>
                 <p></p>
             </main>
+            <div className="App">
+                         <img src={images.NotFounded404Cat} alt="" style={{width: "300px", height: "200px", padding: "0px", borderRadius: "15px", position: "absolute", top: "180px"}}/>
+                    </div>
             <br/>
             <br/>
             

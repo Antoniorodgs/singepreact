@@ -36,7 +36,7 @@ export const Notifications = () => {
 
     return (
         <div>
-            <h3>Notificações</h3><br/>
+            <h3>Notificações</h3><br/><hr/><br/>
             <p>Produtos vencidos:</p><br />
             <div id="stockTableNot">
             <table className='ProdListNot'>

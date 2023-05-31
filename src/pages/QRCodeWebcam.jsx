@@ -144,7 +144,7 @@ const QRCodeWebcam = () => {
                 legacyMode={legacy}
                 facingMode={'environment'}
               />
-              <button style={{width: "150px", borderRadius: "5px", background: "green", color: "white", padding: "2px"}} onClick={() => setLegacy(false)}>Iniciar Venda</button>
+              <button style={{width: "150px", borderRadius: "5px", background: "rgb(0 255 89)", color: "black", padding: "5px"}} onClick={() => setLegacy(false)}>Camera</button>
             </div>
             {/* <div className="card-footer rounded mb-1">
               <h6>WebCam Result: {webcamResult}</h6>

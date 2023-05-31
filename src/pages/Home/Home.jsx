@@ -46,21 +46,21 @@ export const Home = (props) => {
       </main>
 
       <article className="equipe-lista">
-      <h1 className="containerhome font-2-xxl">SINGEP</h1><br/>
+      <h1 className="containerhome font-2-xxl" style={{color: "white"}}>SINGEP</h1><br/>
       <div className='containerhome singep'>
       <img src={images.foods} className='tratarimg' alt=""></img>
       <p className='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum lobortis neque sed porta. Morbi laoreet ornare vehicula. Suspendisse varius scelerisque justo, sit amet 
         scelerisque arcu. Maecenas ut neque ut diam molestie feugiat. Duis massa nibh, sollicitudin ac ullamcorper a, auctor rhoncus sem. Vestibulum tortor tortor, volutpat in lobortis id,
          cursus vitae ipsum. Curabitur libero massa, ultrices iaculis vehicula eget, placerat eget purus.</p>
       </div><br/><br/><hr /><br/>
-      <h1 className="containerhome font-2-xxl">Como funciona ?</h1><br/>
+      <h1 className="containerhome font-2-xxl" style={{color: "white"}}>Como funciona ?</h1><br/>
       <div className='containerhome singep'>
       <img src={images.womanBuying} className='tratarimg' alt=""></img>
       <p className='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum lobortis neque sed porta. Morbi laoreet ornare vehicula. Suspendisse varius scelerisque justo, sit amet 
         scelerisque arcu. Maecenas ut neque ut diam molestie feugiat. Duis massa nibh, sollicitudin ac ullamcorper a, auctor rhoncus sem. Vestibulum tortor tortor, volutpat in lobortis id,
          cursus vitae ipsum. Curabitur libero massa, ultrices iaculis vehicula eget, placerat eget purus.</p>
       </div><br/><br/><hr /><br/> 
-        <h1 className="containerhome font-2-xxl" id="aqui">Nosso time e composto</h1><br/><br/>
+        <h1 className="containerhome font-2-xxl" id="aqui" style={{color: "white"}}>Nosso time e composto</h1><br/><br/>
         <ul className="imagenstratamento">
           <li className='imagemEquipe'>
             <a href="https://nasa.com">

@@ -104,7 +104,7 @@ export const Register = (props) => {
       </main>
       
     <div className="App">
-    <div className="logRegBorder" style={{backgroundColor: "white"}}>
+    <div className="logRegBorder">
       <h3>Registre-se</h3><br/>
       <form  className="formTextAlignLeft" onSubmit={handleSubmit}>
         <div className="rowReg">

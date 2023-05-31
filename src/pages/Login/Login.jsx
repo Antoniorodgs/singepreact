@@ -65,7 +65,7 @@ export const Login = (props) => {
         </div>
     </main>
     <div className="App">
-    <div className="divLogReg logRegBorder" style={{backgroundColor: "white"}}>
+    <div className="divLogReg logRegBorder">
       <h3>Conecte-se</h3><br/>
       <div className="">
       <form className="login-form" onSubmit={handleSubmit}>
