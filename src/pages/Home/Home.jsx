@@ -1,4 +1,5 @@
 import { images } from '../../constants';
+import singepVideo from "../../assets/videos/SINGEPapresentacao.mp4";
 
 export const Home = (props) => {
   
@@ -28,10 +29,10 @@ export const Home = (props) => {
           <div className="introducao-conteudo">
             
             <br /><br />
-            <h1 class="font-2-xxl">
+            <h1>
               Facilite suas operações <span className="cor-p1">.</span>
             </h1>
-            <p className="font-2-1">
+            <p>
               Otimize seus processos e faça seu negocio crescer com o sistema
               inteligente de gerenciamento de produtos alimentícios SINGEP.
             </p>
@@ -64,10 +65,6 @@ export const Home = (props) => {
       </a>
       </div><br/><br/><br/><br/>
       
-      
-      
-      
-      
       <h1 className="containerhome font-2-xxl" id="singep" style={{color: "white"}}>SINGEP</h1><br/><br/><br/>
       <div className='containerhome singep'>
       <img src={images.foods} className='tratarimg' alt=""></img>
@@ -75,6 +72,10 @@ export const Home = (props) => {
         scelerisque arcu. Maecenas ut neque ut diam molestie feugiat. Duis massa nibh, sollicitudin ac ullamcorper a, auctor rhoncus sem. Vestibulum tortor tortor, volutpat in lobortis id,
          cursus vitae ipsum. Curabitur libero massa, ultrices iaculis vehicula eget, placerat eget purus.</p>
       </div><br/><br/><hr /><br/>
+      <div style={{}}>
+        <video src={singepVideo} controls styles={{width: "100px", height: "100px"}}></video>
+      </div>
+      
       <h1 className="containerhome font-2-xxl" id="como-usar" style={{color: "white"}}>Como funciona ?</h1><br/><br/><br/>
       <div className='containerhome singep'>
       <img src={images.womanBuying} className='tratarimg' alt=""></img>
