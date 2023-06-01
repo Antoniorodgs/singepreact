@@ -52,7 +52,7 @@
 }
 
 .logRegBorder {
-  border: 2px solid #89ff89;
+  border: 2px solid #6dd26d;
   padding: 20px; 
   position: absolute;
   top: 80px;
@@ -84,7 +84,7 @@ input {
 
 button.btnLogReg {
   /* border: 2px solid rgb(0, 0, 0);  */
-  background-color: #89ff89;
+  background-color: #6dd26d;
   padding: 0.75rem;
   border-radius: 10px;
   cursor: pointer;
@@ -360,7 +360,7 @@ textarea {
 /*TELA HOME NAV*/
 
 .header-home {
-  background-color: #89ff89;
+  background-color: #6dd26d;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
   width: 100%;
   
@@ -436,7 +436,7 @@ textarea {
 /*TELA HOME CONTEUDO TOPO*/
 
 .introducao-bg {
-  background: #89ff89;
+  background: #6dd26d;
   /* box-shadow: inset 0 -100px #303030; */
   padding: 0 10% 0 10%;
   display: flex;
@@ -611,7 +611,7 @@ ul.imagenstratamento {
 /* footer */
 
 .footer-bghome {
-  background-color: #89ff89;
+  background-color: #6dd26d;
   font-size: 8px;
   padding-bottom: 5em;
 }
@@ -1065,13 +1065,13 @@ section.containervenda {
 }
 
 #personTeam {
-  box-shadow: 20px 20px #0099ff;
+  box-shadow: 20px 20px #0099ffd8;
 }
 
 .tratarimg {
   height: 20%;
   width: 20%;
-  box-shadow: 28px 28px #19e723;
+  box-shadow: 28px 28px #5ad45a;
   border: 2px solid rgba(255, 255, 255, 0.400);
   border-radius: 10px;
 }

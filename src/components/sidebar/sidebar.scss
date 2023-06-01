@@ -4,9 +4,9 @@
 .sidebar {
     @include flex(stretch, flex-start);
     flex-direction: column;
-    color: $txtColor;
+    color: black;
     width: $sideBarWidth;
-    background-color: #89ff89;
+    background-color: #6dd26d;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     height: 100vh;
     position: fixed;
@@ -16,7 +16,7 @@
     @include tablet {
         width: 200px;
         //*cor do fundo, deixa isso anotado aqui, pq eu me perdi 8 vezes
-        background-color: #a8de97;
+        background-color: #6dd26d;
         color: #000000;
         z-index: 1;
     }
