@@ -3,8 +3,8 @@
 .main {
   padding-left: $sideBarWidth;
   overflow-x: hidden;
-  background: #303030;
-  color: white;
+  background: #eeeeee;
+  color: rgb(0, 0, 0);
 
   @include tablet {
     padding-left: 0;

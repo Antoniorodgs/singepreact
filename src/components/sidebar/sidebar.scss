@@ -4,9 +4,9 @@
 .sidebar {
     @include flex(stretch, flex-start);
     flex-direction: column;
-    color: black;
+    color: rgb(73, 73, 73);
     width: $sideBarWidth;
-    background-color: #6dd26d;
+    background-color: #89ff89;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     height: 100vh;
     position: fixed;
