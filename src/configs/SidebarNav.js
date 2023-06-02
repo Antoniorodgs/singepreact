@@ -1,7 +1,7 @@
 export const SidebarNav = [
   {
     link: '/dashboard',
-    section: 'dasboard',
+    section: 'dashboard',
     icon: <i className="bx bx-home-alt"></i>,
     text: 'Início',
   },
@@ -9,7 +9,7 @@ export const SidebarNav = [
     link: '/dashboard/notificacoes',
     section: 'notificacoes',
     icon: <i className="bx bx-bell"></i>,
-    text: 'Notificações'
+    text: 'Notificações',
   },
   {
     link: '/dashboard/vender',
@@ -46,5 +46,11 @@ export const SidebarNav = [
     section: 'fale-conosco',
     icon: <i className="bx bx-chat"></i>,
     text: 'Fale Conosco',
+  },
+  {
+    darkMode: true,
+    icon: <i className="bx bx-moon"></i>,
+    text: 'DarkMode',
+    action: 'darkModeToggle',
   },
 ];

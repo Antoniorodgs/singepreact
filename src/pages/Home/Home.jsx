@@ -1,12 +1,18 @@
 import { images } from '../../constants';
+import './dark-mode.css';
+import React, { useState } from 'react';
 import singepVideo from "../../assets/videos/SINGEPapresentacao.mp4";
 
 export const Home = (props) => {
-  
-  document.documentElement.requestFullscreen();
-  
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.documentElement.classList.toggle('dark-mode');
+  };
+
   return (
-    <div className='allHome'>
+    <div className={`allHome ${darkMode ? 'dark-mode' : ''}`}>
       <header className="header-home">
         <div className="headerhome containerhome">
 
@@ -20,6 +26,9 @@ export const Home = (props) => {
               <li>
                 <a href="/register">Registrar</a>
               </li>
+            <li>
+            <a href="#" onClick={toggleDarkMode}>DarkMode</a>
+            </li>
             </ul>
           </nav>
         </div>
@@ -46,7 +55,7 @@ export const Home = (props) => {
         </div>
       </main>
 
-      <article className="equipe-lista">
+      <article className={`equipe-lista ${darkMode ? 'dark-mode' : ''}`}>
       <div>
       <a className="botao1" href="/#singep">
         Singep
@@ -65,10 +74,10 @@ export const Home = (props) => {
       </a>
       </div><br/><br/><br/><br/>
       
-      <h1 className="containerhome font-2-xxl" id="singep">SINGEP</h1><br/><br/><br/>
+      <h1 className="containerhome font-2-xxl dark-text" id="singep">SINGEP</h1><br/><br/><br/>
       <div className='containerhome singep'>
       <img src={images.foods} className='tratarimg' alt=""></img>
-      <p className='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum lobortis neque sed porta. Morbi laoreet ornare vehicula. Suspendisse varius scelerisque justo, sit amet 
+      <p className='p dark-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum lobortis neque sed porta. Morbi laoreet ornare vehicula. Suspendisse varius scelerisque justo, sit amet 
         scelerisque arcu. Maecenas ut neque ut diam molestie feugiat. Duis massa nibh, sollicitudin ac ullamcorper a, auctor rhoncus sem. Vestibulum tortor tortor, volutpat in lobortis id,
          cursus vitae ipsum. Curabitur libero massa, ultrices iaculis vehicula eget, placerat eget purus.</p>
       </div><br/><br/><hr /><br/>
@@ -76,17 +85,17 @@ export const Home = (props) => {
         <video src={singepVideo} controls styles={{width: "100px", height: "100px"}}></video>
       </div> */}
       
-      <h1 className="containerhome font-2-xxl" id="como-usar">Como funciona ?</h1><br/><br/><br/>
+      <h1 className="containerhome font-2-xxl dark-text" id="como-usar ">Como funciona ?</h1><br/><br/><br/>
       <div className='containerhome singep'>
       <img src={images.womanBuying} className='tratarimg' alt=""></img>
-      <p className='p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum lobortis neque sed porta. Morbi laoreet ornare vehicula. Suspendisse varius scelerisque justo, sit amet 
+      <p className='p dark-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum lobortis neque sed porta. Morbi laoreet ornare vehicula. Suspendisse varius scelerisque justo, sit amet 
         scelerisque arcu. Maecenas ut neque ut diam molestie feugiat. Duis massa nibh, sollicitudin ac ullamcorper a, auctor rhoncus sem. Vestibulum tortor tortor, volutpat in lobortis id,
          cursus vitae ipsum. Curabitur libero massa, ultrices iaculis vehicula eget, placerat eget purus.</p>
       </div><br/><br/><hr /><br/> 
-        <h1 className="containerhome font-2-xxl">Nosso time e composto</h1><br/><br/><br/>
+        <h1 className="containerhome font-2-xxl dark-text">Nosso time e composto</h1><br/><br/><br/>
         <div style={{textAlign: "center"}} id="equipe-singep">
           <br/>
-          <p style={{fontStyle: "italic"}}>´´Unir-se é um bom começo, manter a união é um progresso, e trabalhar em conjunto é a vitória.´´</p>
+          <p style={{fontStyle: "italic "}}>´´Unir-se é um bom começo, manter a união é um progresso, e trabalhar em conjunto é a vitória.´´</p>
           <p>- Henry Ford -</p>
         </div><br /><br /><br/><br/>
         <ul className="imagenstratamento">

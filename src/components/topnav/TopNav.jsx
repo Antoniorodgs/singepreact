@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './topnav.scss';
 import { UserInfo } from '../user-info/UserInfo';
-import Sidebar from '../sidebar/Sidebar';
+import { Sidebar } from '../sidebar/Sidebar';
 import { data } from '../../constants';
+import { SidebarNav } from '../../configs/SidebarNav';
 
 export const TopNav = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -21,6 +22,7 @@ export const TopNav = () => {
       <div className="sidebar-toggle" onClick={openSidebar}>
         <i className="bx bx-menu-alt-right"></i>
       </div>
+      {isSidebarOpen && <Sidebar closeSidebar={closeSidebar} sidebarNav={SidebarNav} />}
     </div>
   );
 };

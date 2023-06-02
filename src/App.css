@@ -375,6 +375,7 @@ textarea {
   padding: 5px;
   background-color: #0000002c;
   height: 60px;
+  
 }
 
 .containerhome {
@@ -382,6 +383,7 @@ textarea {
   padding-left: 20px;
   display: flex;
   color: black;
+
 }
 
 .containerhome .p {
