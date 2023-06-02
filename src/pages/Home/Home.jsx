@@ -3,7 +3,12 @@ import singepVideo from "../../assets/videos/SINGEPapresentacao.mp4";
 
 export const Home = (props) => {
   
-  document.documentElement.requestFullscreen();
+  if (document.fullscreenElement) {
+    document
+      .exitFullscreen()
+      .then(() => console.log("Document Exited from Full screen mode"))
+      .catch((err) => console.error(err));
+  }
   
   return (
     <div className='allHome'>

@@ -104,12 +104,12 @@ const QRCodeWebcam = () => {
               {
                 buyingItens.map((item, index) => {
                   if(true /*index%2 === 0*/){
-                    return <><tr style={{backgroundColor: "#e0e0e0"}}>
+                    return <><tr style={{backgroundColor: "#e0e0e0", borderTop: "5px solid white"}}>
                             <td>{item[1]}</td>
                             <td>{item[2]}</td>
                             <td>{item[4]}</td>
                             <td>1</td>
-                        </tr><hr/></>
+                        </tr></>
                   } else {
                      
                   }})

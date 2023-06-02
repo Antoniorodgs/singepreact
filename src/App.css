@@ -705,6 +705,10 @@ li.prodItemPar {
   margin: 2px;
 }
 
+.par {
+  background:rgba(0, 0, 0, 0.055);
+}
+
 ul {
   width: 70%;
 }
@@ -755,7 +759,7 @@ li.initial {
 }
 
 tr.impar {
-  background-color: rgba(255, 255, 255, 0.150);
+  background-color: rgb(255, 255, 255);
 
 }
 
@@ -772,7 +776,7 @@ table, th, td {
 
 table {
 
-  border: rgba(255, 255, 255, 0.150) 1px solid;
+  border: rgba(0, 0, 0, 0.2) 2px solid;
   border-radius: 10px;
   
 }
