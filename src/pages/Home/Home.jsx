@@ -26,9 +26,7 @@ export const Home = (props) => {
               <li>
                 <a href="/register">Registrar</a>
               </li>
-            <li>
-            <a href="#" onClick={toggleDarkMode}>DarkMode</a>
-            </li>
+            
             </ul>
           </nav>
         </div>
@@ -69,6 +67,11 @@ export const Home = (props) => {
       <a className="botao1" href="/#contato">
         Contato
       </a>
+{/*   
+      <a href="#" style={{background: "black", padding: "5px"}} onClick={toggleDarkMode}>
+        Modo Escuro
+      </a> */}
+            
       <a className="botao1" href="/404">
         Doar
       </a>
@@ -100,7 +103,7 @@ export const Home = (props) => {
         </div><br /><br /><br/><br/>
         <ul className="imagenstratamento">
           <li className='imagemEquipe'>
-            <a href="https://nasa.com">
+            <a href="https://www.linkedin.com/in/amaro-neto-4b6054a3">
               <img id="personTeam" src={images.amaro} alt="Amaro" />
               <h4>Amaro Neto</h4><br />
               <p>Aluno de Engenharia da Computação 10° semestre. Responsável por escrever todos os artigos.</p>
@@ -108,7 +111,7 @@ export const Home = (props) => {
           </li>
 
           <li className='imagemEquipe'>
-            <a href="https://google.com">
+            <a href="https://www.linkedin.com/in/antoniorodgs">
               <img id="personTeam" src={images.antonio} alt="Antonio" />
               <h4>Antônio Rodrigues</h4><br/>
               <p>Aluno de Engenharia da Computação 8° semestre. Responsável pelo Frontend, utilizou o framework ReactJS.</p>

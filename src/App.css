@@ -104,9 +104,8 @@ button.btnLogReg:hover {
 button {
   display: inline-block;
   padding: 12px 18px;
-  background: black;
+  background: none;
   border-radius: 30px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
@@ -775,7 +774,7 @@ li.initial {
 }
 
 tr.impar {
-  background-color: rgba(255, 255, 255, 0.150);
+  background-color: rgb(170, 170, 170);
 
 }
 

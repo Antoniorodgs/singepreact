@@ -49,8 +49,8 @@ export const SidebarNav = [
   },
   {
     darkMode: true,
-    icon: <i className="bx bx-moon" style={{width: "15px", height: "15px", background: "none"}}></i>,
+    icon: <i className="bx bx-moon" style={{color: "#454545"}} ></i>,
     text: 'Modo Escuro',
     action: 'darkMode',
-  },
+  }
 ];
