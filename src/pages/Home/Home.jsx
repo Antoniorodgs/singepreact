@@ -83,10 +83,10 @@ export const Home = (props) => {
       <p className='p dark-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum lobortis neque sed porta. Morbi laoreet ornare vehicula. Suspendisse varius scelerisque justo, sit amet 
         scelerisque arcu. Maecenas ut neque ut diam molestie feugiat. Duis massa nibh, sollicitudin ac ullamcorper a, auctor rhoncus sem. Vestibulum tortor tortor, volutpat in lobortis id,
          cursus vitae ipsum. Curabitur libero massa, ultrices iaculis vehicula eget, placerat eget purus.</p>
-      </div><br/><br/><hr /><br/>
-      {/* <div style={{}}>
+      </div><br/><br/><hr /><br/><br /><br />
+      <div style={{textAlign: "right", display: "flex"}}>
         <video src={singepVideo} controls styles={{width: "100px", height: "100px"}}></video>
-      </div> */}
+      </div>
       
       <h1 className="containerhome font-2-xxl dark-text" id="como-usar ">Como funciona ?</h1><br/><br/><br/>
       <div className='containerhome singep'>

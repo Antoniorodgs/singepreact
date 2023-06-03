@@ -1173,11 +1173,11 @@ p {
   font-size: 16px;
 }
 
-/* video {
+video {
   width: 720px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.301);
   border-radius: 10px;
   align-self: center;
   margin-bottom: 100px;
 
-} */
+}
