@@ -3,7 +3,7 @@ import images from "./images"
 const data = {
     user: {
         name: 'Mercearia Nova Esperança',
-        img: images.cestaUsuario
+        img: images.cesta
     },
     summary: [
         {

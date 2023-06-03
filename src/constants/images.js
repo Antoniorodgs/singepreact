@@ -18,7 +18,7 @@ const images = {
     market: require("../assets/images/market.png"),
     market2: require("../assets/images/market2.png"),
     SINGEPQRLOGO: require("../assets/images/SINGEPQRLOGO.png"),
-    cesta: require("../assets/images/cestaUsuario.png")
+    cesta: require("../assets/images/market2.png")
 
 }
 
