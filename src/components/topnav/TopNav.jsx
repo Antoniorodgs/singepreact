@@ -5,7 +5,7 @@ import { Sidebar } from '../sidebar/Sidebar';
 import { data } from '../../constants';
 import { SidebarNav } from '../../configs/SidebarNav';
 
-export const TopNav = () => {
+export const TopNav = ({ darkMode }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const openSidebar = () => {
@@ -18,7 +18,7 @@ export const TopNav = () => {
 
   return (
     <div className="topnav">
-      <UserInfo user={data.user} />
+      <UserInfo user={data.user} darkMode={darkMode} />
       <div className="sidebar-toggle" onClick={openSidebar}>
         <i className="bx bx-menu-alt-right"></i>
       </div>

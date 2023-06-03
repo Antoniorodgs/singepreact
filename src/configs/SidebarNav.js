@@ -49,8 +49,8 @@ export const SidebarNav = [
   },
   {
     darkMode: true,
-    icon: <i className="bx bx-moon"></i>,
-    text: 'DarkMode',
-    action: 'darkModeToggle',
+    icon: <i className="bx bx-moon" style={{width: "15px", height: "15px", background: "none"}}></i>,
+    text: 'Modo Escuro',
+    action: 'darkMode',
   },
 ];

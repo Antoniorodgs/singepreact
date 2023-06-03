@@ -183,6 +183,10 @@ button:hover {
   border: 1px solid rgb(180, 180, 180);
   border-radius: 10px;
   padding: 0 15px;
+  &.darkMode {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
 
 .columbtn {
@@ -272,6 +276,11 @@ button:hover {
   border: 1px solid #d8d8d8;
   border-radius: 10px;
   padding: 0 15px;
+  &.darkMode {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
 }
 
 .contato {
@@ -313,6 +322,10 @@ button:hover {
   color: #000000;
   font-size: 0.9rem;
   background-color: #ffffff;
+  &.darkMode {
+    color: #ffffff;
+    background-color: #303030;
+  }
 }
 
 select option {
@@ -347,6 +360,11 @@ textarea {
   overflow-y: auto;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+  &.darkMode {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.582);
+  }
   
 }
 
@@ -686,7 +704,7 @@ ul.imagenstratamento {
 hr {
   height: 2px;
   border: none;
-  background-color: #0000001f;
+  background-color: rgb(194, 194, 194);
 }
 
 h2 {
@@ -926,7 +944,16 @@ section.containervenda {
   border-radius: 10px 10px 0 0;
   color: rgba(0, 0, 0, 0.904);
   border: 1px solid rgb(226, 226, 226);
+  
+  &.darkMode {
+    color: #ffffff;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.20);
+    border: 2px solid rgba(0, 0, 0, 0.6);
+  }
+
 }
+
 
 .exibirprodutos {
   background-color: rgb(255, 255, 255);
@@ -936,6 +963,12 @@ section.containervenda {
   overflow-y: scroll;
   font-size: smaller;
   border: 1px solid rgb(226, 226, 226);
+  &.darkMode {
+    color: #ffffff;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.30);
+    border: 2px solid rgba(0, 0, 0, 0.6);
+  }
 }
 
 .totalproduto {
@@ -980,6 +1013,12 @@ section.containervenda {
   justify-content: space-between;
   align-items: center;
   border: 1px solid rgb(226, 226, 226);
+  &.darkMode {
+    color: #ffffff;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.20);
+    border: 2px solid rgba(0, 0, 0, 0.6);
+  }
 }
 
 .divcaixa {

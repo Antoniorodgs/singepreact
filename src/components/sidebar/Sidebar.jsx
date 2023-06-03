@@ -19,7 +19,7 @@ export const Sidebar = ({ onDarkModeToggle }) => {
   const handleDarkModeToggle = () => {
     onDarkModeToggle(); // Chama a função do pai para ativar o modo escuro
   };
-
+  
   return (
     <div className="sidebar">
       <div className="sidebar__logo">
