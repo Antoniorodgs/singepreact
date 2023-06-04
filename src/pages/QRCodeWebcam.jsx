@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import QrReader from 'react-qr-reader';
 import axios from "axios";
 import bipSound from '../static/bipSound.mp3';
 import womanAlert from "../static/expiredProd.mp3";
+import { DarkModeContext } from '../context/DarkModeContext';
 
 let bipSong = new Audio(bipSound);
 let womanSongAlert = new Audio(womanAlert);
@@ -17,6 +18,8 @@ const QRCodeWebcam = () => {
   const [popUp, setPopUp] = useState("popUp");
   const [prod, setProd] = useState("");
   const [legacy, setLegacy] = useState(true);
+
+  const {darkMode} = useContext(DarkModeContext);
 
   useEffect(() => {
     document.documentElement.requestFullscreen();
@@ -86,14 +89,14 @@ const QRCodeWebcam = () => {
       
       <div className='divcaixa'> 
         <div className='boxesquerda'>
-        <div className="topodescricao">
+        <div className={`topodescricao ${darkMode ? "darkMode": ""}`}>
               <div><h5>Produto</h5></div>
               <div><h5>Lote</h5></div>
               <div><h5>Preço</h5></div>
               <div><h5>Quantidade</h5></div>
             </div>
 
-            <div className="exibirprodutos">
+            <div className={`exibirprodutos ${darkMode ? "darkMode" : ""}`}>
             <table className='ProdList'>
                 <tr className='initial'>
                     <th></th>
@@ -104,7 +107,11 @@ const QRCodeWebcam = () => {
               {
                 buyingItens.map((item, index) => {
                   if(true /*index%2 === 0*/){
+<<<<<<< HEAD
                     return <><tr style={{backgroundColor: "#e0e0e0", borderTop: "5px solid white"}}>
+=======
+                    return <><tr>
+>>>>>>> main
                             <td>{item[1]}</td>
                             <td>{item[2]}</td>
                             <td>{item[4]}</td>
@@ -132,7 +139,7 @@ const QRCodeWebcam = () => {
         </div>
 
         <div className='boxdireita'>
-            <div className='topodireita'>
+            <div className={` topodireita ${darkMode ? "darkMode": ""}`}>
             <div>
             <div className="card-header m-1 rounded text-center">
             

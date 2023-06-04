@@ -17,7 +17,8 @@ const images = {
     NotFounded404Cat: require("../assets/images/404.jpg"),
     market: require("../assets/images/market.png"),
     market2: require("../assets/images/market2.png"),
-    SINGEPQRLOGO: require("../assets/images/SINGEPQRLOGO.png")
+    SINGEPQRLOGO: require("../assets/images/SINGEPQRLOGO.png"),
+    cesta: require("../assets/images/market2.png")
 
 }
 

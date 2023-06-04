@@ -86,9 +86,10 @@ const RevenueByMonthsChart = () => {
   )
 }
 
-export const Dashboard = () => {
+export const Dashboard = ({darkMode}) => {
   document.documentElement.requestFullscreen();
   socket.emit("invalidProds", {whatsapp: "11959050868"});
+  console.log("Dashboard: ", darkMode);
   return (
     <DashboardWrapper>
           <DashboardWrapperMain>
@@ -98,7 +99,7 @@ export const Dashboard = () => {
                         {
                             data.summary.map((item, index) => (
                                 <div key={`summary-${index}`} className="col-6 col-md-6 col-sm-12 mb">
-                                    <SummaryBox item={item}/>
+                                    <SummaryBox item={item} darkMode={darkMode} />
                                 </div>
                             ))
                         }

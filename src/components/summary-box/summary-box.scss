@@ -17,6 +17,11 @@
         
         color: rgb(0, 0, 0);
         font-weight: 700;
+
+        &.darkMode {
+            color: #ffffff; // Cor do texto para o modo dark
+            font-weight: 700;
+        }
         
         &__title {
            
@@ -33,6 +38,11 @@
             color: rgb(0, 211, 11);
     
         }
+        
+    }
+    &.darkMode {
+        background-color: rgba(255, 255, 255, 0.200); // Cor de fundo para o modo dark
+        color: #ffffff; // Cor do texto para o modo dark
     }
 }
 
