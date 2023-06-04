@@ -88,9 +88,13 @@ export const Home = (props) => {
       <h1 className="containerhome font-2-xxl dark-text" id="singep">SINGEP</h1><br/><br/><br/>
       <div className='containerhome singep'>
       <img src={images.foods} className='tratarimg' alt=""></img>
-      <p className='p dark-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum lobortis neque sed porta. Morbi laoreet ornare vehicula. Suspendisse varius scelerisque justo, sit amet 
-        scelerisque arcu. Maecenas ut neque ut diam molestie feugiat. Duis massa nibh, sollicitudin ac ullamcorper a, auctor rhoncus sem. Vestibulum tortor tortor, volutpat in lobortis id,
-         cursus vitae ipsum. Curabitur libero massa, ultrices iaculis vehicula eget, placerat eget purus.</p>
+      <p className='p dark-text'>O SINGEP (Sistema INteligente de GErenciamento de Produtos alimentícios). A gestão eficiente de produtos é fundamental para o sucesso de qualquer
+empresa. É preciso garantir que todos os processos envolvidos, desde a produção
+até a chegada ao consumidor final, estejam em perfeita harmonia para assegurar a
+qualidade e integridade dos produtos. Para isso, muitas empresas estão adotando o
+Sistema Inteligente de Gerenciamento de Produtos, que tem como objetivo interligar todos os dados e processos referentes à procedência do produto, para garantir sua
+qualidade, estado e preservação.
+</p>
       </div><br/><br/><hr /><br/><br /><br />
       <div style={{textAlign: "right", display: "flex"}}>
         <video src={singepVideo} controls styles={{width: "100px", height: "100px"}}></video>

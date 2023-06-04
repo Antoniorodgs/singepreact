@@ -44,11 +44,11 @@ export const Register = (props) => {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
       });
-      alert(resp.data);
+      // alert(resp.data);
       navigate("/authUserAccount");
 
     } catch(error) {
-      alert(error.request.response);
+      // alert(error.request.response);
       console.log(error.request.response);
 
       console.log(error.request.status);
