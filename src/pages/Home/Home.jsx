@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import singepVideo from "../../assets/videos/SINGEPapresentacao.mp4";
 
 export const Home = (props) => {
-<<<<<<< HEAD
   
   if (document.fullscreenElement) {
     document
@@ -13,7 +12,6 @@ export const Home = (props) => {
       .catch((err) => console.error(err));
   }
   
-=======
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
@@ -21,7 +19,6 @@ export const Home = (props) => {
     document.documentElement.classList.toggle('dark-mode');
   };
 
->>>>>>> main
   return (
     <div className={`allHome ${darkMode ? 'dark-mode' : ''}`}>
       <header className="header-home">
