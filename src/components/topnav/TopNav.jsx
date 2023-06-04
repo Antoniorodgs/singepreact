@@ -3,7 +3,7 @@ import './topnav.scss';
 import { UserInfo } from '../user-info/UserInfo';
 import { Sidebar } from '../sidebar/Sidebar';
 import { data } from '../../constants';
-import { SidebarNav } from '../../configs/SidebarNav';
+import SidebarNav from '../../configs/SidebarNav';
 
 export const TopNav = ({ darkMode }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

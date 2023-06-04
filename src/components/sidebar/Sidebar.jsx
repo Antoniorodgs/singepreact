@@ -2,16 +2,19 @@ import React, { useEffect, useState } from 'react';
 import './sidebar.scss';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { images } from '../../constants';
-import { SidebarNav } from '../../configs/SidebarNav';
+import SidebarNav from '../../configs/SidebarNav';
 
 export const Sidebar = ({ onDarkModeToggle }) => {
+
   const [activeIndex, setActiveIndex] = useState(0);
   const location = useLocation();
   const navigate = useNavigate();
 
+  const SidebarNavegation = SidebarNav();
+
   useEffect(() => {
     const curPath = window.location.pathname.split('/dashboard')[1];
-    const activeItem = SidebarNav.findIndex((item) => item.section === curPath);
+    const activeItem = SidebarNavegation.findIndex((item) => item.section === curPath);
 
     setActiveIndex(curPath.length === 0 ? 0 : activeItem);
   }, [location]);
@@ -26,7 +29,7 @@ export const Sidebar = ({ onDarkModeToggle }) => {
         <img src={images.SINGEPQRLOGO} alt="" />
       </div>
       <div className="sidebar__menu">
-        {SidebarNav.map((nav, index) =>
+        {SidebarNavegation.map((nav, index) =>
           nav.darkMode ? (
             <div className="sidebar__menu__item" key={`nav-${index}`}>
               <div className="sidebar__menu__item__icon">
