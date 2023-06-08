@@ -125,3 +125,84 @@
         }
     }
 }
+
+
+
+@media screen and (max-width: 1300px) {
+    .sidebar {
+    
+        &__menu {
+            @include flex(stretch, flex-start);
+            flex-direction: column;
+            flex-grow: 1;
+    
+            &__item {
+                @include flex(center, flex-start);
+                position: relative;
+                margin-bottom: 1rem;
+                padding-left: 20%;
+                transition: color 0.3s ease-in-out;
+                font-size: 15px;
+    
+                @include tablet {
+                    padding-left: $mobileSpacing;
+                }
+    
+                &:hover {
+                    color: $black;
+                    font-weight: bolder;
+    
+                    @include tablet {
+                        color: $black;
+                    }
+                }
+    
+                &.active {
+                    font-weight: 700;
+                    color: $black;
+    
+                    @include tablet {
+                        color: $black;
+                    }
+    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        height: 100%;
+                        width: 5px;
+                        left: 0;
+                        top: 0;
+                        background-color: $black;
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+    
+                        @include tablet {
+                            background-color: $black;
+                        }
+                    }
+                }
+    
+                &__icon {
+                    --size: 40px;
+                    width: var(--size);
+                    height: var(--size);
+                    margin-right: 2rem;
+                    @include flex(center, center);
+    
+                    @include tablet {
+                        margin-right: 1rem;
+                    }
+    
+                    i {
+                        font-size: 1.5rem;
+                    }
+                }
+    
+                &:last-child {
+                    margin-top: auto;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
