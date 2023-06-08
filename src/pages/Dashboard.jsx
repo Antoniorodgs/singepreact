@@ -93,7 +93,7 @@ export const Dashboard = ({darkMode}) => {
   
   useEffect(() => {
   
-    socket.emit("invalidProds", {whatsapp: "11959050868"});
+    socket.emit("invalidProds", {whatsapp: "11958279760"});
   
   }, []);
   
