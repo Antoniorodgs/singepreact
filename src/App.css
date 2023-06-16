@@ -52,7 +52,7 @@
 }
 
 .logRegBorder {
-  border: 2px solid #89ff89;
+  border: 5px solid #89ff89;
   padding: 20px; 
   position: absolute;
   top: 80px;
@@ -724,6 +724,10 @@ li.prodItemPar {
   margin: 2px;
 }
 
+.par {
+  background:rgba(0, 0, 0, 0.055);
+}
+
 ul {
   width: 70%;
 }
@@ -791,7 +795,7 @@ table, th, td {
 
 table {
 
-  border: rgba(255, 255, 255, 0.150) 1px solid;
+  border: rgba(0, 0, 0, 0.2) 2px solid;
   border-radius: 10px;
   
 }

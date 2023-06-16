@@ -1,4 +1,11 @@
-export const SidebarNav = [
+import { useContext, useState } from "react";
+import { DarkModeContext } from "../context/DarkModeContext";
+
+const SidebarNav = () => { 
+  
+  const {darkMode} = useContext(DarkModeContext);
+  
+  return [
   {
     link: '/dashboard',
     section: 'dashboard',
@@ -49,8 +56,11 @@ export const SidebarNav = [
   },
   {
     darkMode: true,
-    icon: <i className="bx bx-moon" style={{color: "#454545"}} ></i>,
-    text: 'Modo Escuro',
+    icon: <i className="bx bx-moon" style={{backgroundColor: "#454545", borderRadius: "30px"}} ></i>,
+    text: (darkMode ? "Modo Claro" : "Modo Escuro"),
     action: 'darkMode',
   }
-];
+]
+}
+
+export default SidebarNav;

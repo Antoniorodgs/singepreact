@@ -112,7 +112,7 @@ const QRCodeWebcam = () => {
                             <td>{item[2]}</td>
                             <td>{item[4]}</td>
                             <td>1</td>
-                        </tr><hr/></>
+                        </tr></>
                   } else {
                      
                   }})

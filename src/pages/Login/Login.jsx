@@ -32,13 +32,13 @@ export const Login = (props) => {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
       });
-      alert(resp.data.body);
+      // alert(resp.data.body);
       if(resp.status === 200) navigate("/dashboard");
 
     } catch(error) {
 
       let data = JSON.parse(error.request.response);
-      alert(data.body);
+      // alert(data.body);
 
     }
     
